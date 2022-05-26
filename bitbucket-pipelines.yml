@@ -12,5 +12,6 @@ pipelines:
         script:
           - pipe: microsoft/azure-static-web-apps-deploy:main
             variables:
-                APP_LOCATION: '$BITBUCKET_CLONE_DIR/'
+                APP_LOCATION: '/'
+                OUTPUT_LOCATION: './'
                 API_TOKEN: 2ef1eacdc0b8c02da0e3cfa7b1c01b4e672ecc79816a5f008b37f9a758c677701-0f5ec2b9-15dc-4f7e-84aa-adca9d669fd201e20047
