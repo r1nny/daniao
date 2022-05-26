@@ -1,10 +1,12 @@
-image: mcr.microsoft.com/azure-cli
+image: atlassian/default-image:3
 
 pipelines:
     default:
-    - step:
+    - step: 
         script:
-        - |
-            ls -al
-            az login --service-principal -u 956c8136-2553-4d38-b63b-41f931323cf0 -p PokFUeGH4v6QvfQ04.JqTHRycA53BCcety -t 476b320f-8c9c-46cb-8856-624a5d3c2c2c
-            az storage blob upload-batch -s . -d '$web' --account-name cs4100320011789b4aa
+        - pipe: microsoft/azure-static-web-apps-deploy:main
+          variables:
+              APP_LOCATION: '/'
+              OUTPUT_LOCATION: './'
+              build_timeout_in_minutes: 60
+              API_TOKEN: 2ef1eacdc0b8c02da0e3cfa7b1c01b4e672ecc79816a5f008b37f9a758c677701-0f5ec2b9-15dc-4f7e-84aa-adca9d669fd201e20047
