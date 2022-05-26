@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程 - 大鸟博客</title>
+<meta name="description" content="PacificRack的优惠码活动已经结束，目前最新的活动看这里：" />
+<meta name="keywords" content="PacificRack,PacificRack VPS,PacificRack5折优惠码,PacificRack3折优惠码,PacificRack优惠码,pacificrack亚洲优化,PacificRack 测评" />
+<meta property="og:type" content="acticle">
+<meta property="og:locale" content="zh-CN" />
+<meta property="og:title" content="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" />
+<meta property="og:author" content="大鸟" />
+<meta property="og:image" content="https://www.daniao.org/wp-content/uploads/2019/11/pacificrack-1-min.png" />
+<meta property="og:site_name" content="大鸟博客">
+<meta property="og:description" content="PacificRack的优惠码活动已经结束，目前最新的活动看这里：" />
+<meta property="og:url" content="https://www.daniao.org/7291.html" />
+<meta property="og:release_date" content="2019年11月15日14:40:41" />
+<link rel="shortcut icon" href="../wp-content/uploads/2019/05/favicon.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../wp-content/themes/begin/img/favicon.png" />
+<link rel="pingback" href="https://www.daniao.org/xmlrpc.php">
+<meta name='robots' content='max-image-preview:large' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('index.html');--wp--preset--duotone--grayscale: url('index.html');--wp--preset--duotone--purple-yellow: url('index.html');--wp--preset--duotone--blue-red: url('index.html');--wp--preset--duotone--midnight: url('index.html');--wp--preset--duotone--magenta-yellow: url('index.html');--wp--preset--duotone--purple-green: url('index.html');--wp--preset--duotone--blue-orange: url('index.html');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='begin-style-css'  href='../wp-content/themes/begin/style.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='be-css'  href='../wp-content/themes/begin/css/be.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='fonts-css'  href='../wp-content/themes/begin/css/fonts/fonts.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='icons-css'  href='../wp-content/themes/begin/css/icons/icons.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='../wp-includes/css/dashicons.min.css?ver=5.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='iconfontd-css'  href='https://at.alicdn.com/t/font_968129_uxa92lcq0ta.css?ver=2021/12/12' type='text/css' media='all' />
+<link rel='stylesheet' id='highlight-css'  href='../wp-content/themes/begin/css/highlight.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='prettify-css'  href='../wp-content/themes/begin/css/prettify.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/jquery.lazyload.js?ver=2021%252F12%252F12' id='lazyload-js'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.daniao.org/wp-content/themes/begin/js/html5.js?ver=2021/12/12' id='html5-js'></script>
+<![endif]-->
+<link rel="canonical" href="index.html" />
+<style type="text/css">.single-post .entry-header h1, .single-content h3, .single-content h4, .single-content h6, .single-content h2 {border-left: 5px solid #1e73be;}.tagcloud {
+    overflow: hidden;
+    padding: 15px 0 12px 15px;
+}
+.tagcloud a {
+    float: left;
+    width: 31.3333%;
+    margin: 0 1% 1% 0;
+    padding: 0 8px;
+    color: #fff;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    font-size: 12px;
+    opacity: .7;
+    border-radius: 2px;
+    overflow: hidden;
+}
+ .tips {
+    position: absolute;
+    top: 14px;
+    left: 1px;
+    background-color: #FFFF00;
+    padding: 1px 3px 2px;
+    border-radius: 3px;
+    animation: moveUpDown 1s infinite;
+    -webkit-animation: moveUpDown 1s infinite;
+}
+.tips {
+    margin-left: 20px;
+    color: #666;
+}@media screen and (min-width: 1025px) {.nav-menu li.menu-item:nth-child(n+8){display: none;}}.planned {transition: width 4000ms;}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("../wp-content/uploads/2019/05/bg-light-min.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d2ee56508881021f9b68943d7ac789dd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="post-template-default single single-post postid-7291 single-format-standard custom-background" ontouchstart="">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>	<script>
+		if (localStorage.getItem('beNightMode')) {
+			document.body.className +=' night';
+		}
+	</script>
+	<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header site-header-h">
+	<div id="header-main" class="header-main">
+				<div id="menu-container" class="da menu-glass">
+			<div id="navigation-top" class="bgt menu_c">
+				<span class="nav-search"></span>														<div class="logo-sites">
+												<p class="site-title">
+						<a href="https://www.daniao.org/">
+			<span class="logo-small"><img src="../wp-content/themes/begin/img/logo-s.png" alt="大鸟博客" /></span>
+			大鸟博客		</a>
+	
+	
+			</p>
+
+								<p class="site-description clear-small">分享是一种美德~</p>
+								</div>
+
+									<div id="site-nav-wrap" class="site-nav-wrap-right">
+									<div id="sidr-close">
+						<span class="toggle-sidr-close"><i class="be be-cross"></i></span>
+												</div>
+					<nav id="site-nav" class="main-nav nav-ace">
+									<span id="navigation-toggle" class="bars"><i class="be be-menu"></i></span>
+	
+		<div class="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95-container"><ul id="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95" class="down-menu nav-menu"><li id="menu-item-12946" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12946"><a href="https://www.daniao.org/">VPS监控</a>
+<ul class="sub-menu">
+	<li id="menu-item-12865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12865"><a target="_blank" rel="external nofollow" href="https://buyvm.qixi.me">buyvm实时库存</a></li>
+	<li id="menu-item-12864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12864"><a target="_blank" rel="external nofollow" href="https://bwh.qixi.me/">瓦工实时库存</a></li>
+	<li id="menu-item-16495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16495"><a target="_blank" rel="noopener" href="https://spartan.qixi.me/">斯巴达实时监控</a></li>
+</ul>
+</li>
+<li id="menu-item-12624" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12624"><a href="../dulifuwuqi/index.html">独立服务器</a></li>
+<li id="menu-item-342" class="glyphicon glyphicon-phone menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-342"><a href="../vps-control/index.html">VPS评测</a></li>
+<li id="menu-item-11649" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11649"><a href="../vps-preferential-evaluation/index.html">VPS优惠</a></li>
+<li id="menu-item-11956" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11956"><a href="../vps-tuijian/index.html">VPS推荐</a>
+<ul class="sub-menu">
+	<li id="menu-item-11961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11961"><a href="../11943.html/index.html">美国 cn2 gia vps</a></li>
+	<li id="menu-item-12575" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12575"><a href="../12574.html">联通4837 vps</a></li>
+	<li id="menu-item-14799" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14799"><a href="../14795.html">联通9929 vps</a></li>
+	<li id="menu-item-11957" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11957"><a href="../11036.html/index.html">香港 cn2 gia vps</a></li>
+	<li id="menu-item-14396" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14396"><a href="../14368.html">新加坡cn2 gia vps</a></li>
+	<li id="menu-item-12387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12387"><a href="../12385.html">欧洲 cn2 gia vps</a></li>
+	<li id="menu-item-12050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12050"><a href="../11576.html/index.html">南非 cn2 gia vps</a></li>
+	<li id="menu-item-12627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12627"><a href="../12625.html">大硬盘VPS</a></li>
+	<li id="menu-item-12663" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12663"><a href="../12661.html">windows vps</a></li>
+	<li id="menu-item-12798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12798"><a href="../12796.html">日本软银VPS</a></li>
+	<li id="menu-item-13120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13120"><a href="../13055.html">俄罗斯cn2 gia vps</a></li>
+	<li id="menu-item-15462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15462"><a href="../15461.html">不限流量cn2 gia vps</a></li>
+</ul>
+</li>
+<li id="menu-item-14373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14373"><a href="../vps/index.html">VPS主机</a></li>
+<li id="menu-item-3480" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3480"><a href="../btpanel/index.html">宝塔面板</a></li>
+</ul></div>
+<div id="overlay"></div>
+					</nav>
+				</div>
+																<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="search-main" class="da">
+	<div class="off-search-a"></div>
+	<div class="search-wrap bgt fadeInDown animated">
+					<div class="searchbar da">
+							<form method="get" id="searchform-so" action="https://www.daniao.org/">
+					<span class="search-input">
+						<input type="text" value="" name="s" id="so" class="bk dah" placeholder="" required />
+						<button type="submit" id="searchsubmit-so" class="bk da"><i class="be be-search"></i></button>
+					</span>
+										<div class="clear"></div>
+				</form>
+						</div>
+		
+				<div class="searchbar da">
+			<script>
+			function g(formname) {
+				var url = "https://www.baidu.com/baidu";
+				if (formname.s[1].checked) {
+					formname.ct.value = "2097152";
+				} else {
+					formname.ct.value = "0";
+				}
+				formname.action = url;
+				return true;
+			}
+			</script>
+			<form name="f1" onsubmit="return g(this)" target="_blank">
+				<span class="search-input">
+					<input name=word class="swap_value bk dah" placeholder="百度一下" name="q" />
+					<input name=tn type=hidden value="bds" />
+					<input name=cl type=hidden value="3" />
+					<input name=ct type=hidden />
+					<input name=si type=hidden value="www.daniao.org" />
+					<button type="submit" id="searchbaidu" class="search-close bk da"><i class="be be-baidu"></i></button>
+					<input name=s class="choose" type=radio />
+					<input name=s class="choose" type=radio checked />
+				</span>
+			</form>
+		</div>
+		
+					<div class="searchbar da">
+				<form method="get" id="searchform" action="https://cse.google.com/cse" target="_blank">
+					<span class="search-input">
+						<input type="text" value="" name="q" id="s" class="bk dah" placeholder="Google" />
+						<input type="hidden" name="cx" value="017978609038208656401:uoerpecp-ug" />
+						<input type="hidden" name="ie" value="UTF-8" />
+						<button type="submit" id="searchsubmit" class="search-close bk da"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1785" width="200" height="200"><path d="M522.016 438.016v176h290.016c-12 76-88 222.016-290.016 222.016-174.016 0-318.016-146.016-318.016-324s144-324 318.016-324c100 0 166.016 44 204 80l140-134.016C776 50.016 660 0 522.016 0c-282.016 0-512 230.016-512 512 0 284 230.016 512 512 512 296 0 492-208 492-500 0-34.016-4-60-8-84z" p-id="1786"></path></svg></button>
+					</span>
+				</form>
+			</div>
+		
+				<div class="searchbar da">
+			<form method="get" id="searchform" action="https://www.bing.com/search" target="_blank">
+				<span class="search-input">
+					<input type="text" value="" name="q" id="s" class="bk dah" placeholder="Bing" />
+					<input type="hidden" name="q1" value="site:www.daniao.org">
+					<button type="submit" id="searchsubmit" class="bk da"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2107" width="200" height="200"><path d="M340.5824 70.109867L102.536533 0.682667v851.217066L340.650667 643.345067V70.109867zM102.536533 851.7632l238.045867 171.6224 580.881067-340.923733V411.784533L102.536533 851.831467z" p-id="2108"></path><path d="M409.463467 255.3856l113.732266 238.933333 138.8544 56.866134 259.413334-139.400534-506.0608-156.330666z" p-id="2109"></path></svg></button>
+				</span>
+			</form>
+		</div>
+		
+		
+				<div class="searchbar da">
+			<form action="https://www.sogou.com/web" target="_blank" name="sogou_queryform">
+				<span class="search-input">
+					<input type="text" placeholder="上网从搜狗开始" name="query" class="bk dah">
+					<button type="submit" id="sogou_submit" class="search-close bk da" onclick="check_insite_input(document.sogou_queryform, 1)"><svg class="icon soico" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2771" width="200" height="200"><path d="M975.3088 822.10816l-53.80096-52.57216-0.02048 0.01024c-33.6896 59.16672-81.5616 109.2096-139.02848 145.4592-0.06144 0.04096-0.12288 0.07168-0.18432 0.11264l50.50368 53.62688a486.668288 486.668288 0 0 0 142.53056-146.6368z" p-id="2772"></path><path d="M509.83936 924.75392C281.87648 924.75392 97.08544 739.96288 97.08544 512c0-227.96288 184.80128-412.75392 412.75392-412.75392S922.59328 284.03712 922.59328 512c0 74.16832-19.57888 143.75936-53.83168 203.90912l0.02048-0.01024 53.80096 52.57216C969.13408 694.09792 996.07552 606.208 996.07552 512c0-267.34592-216.7296-484.07552-484.07552-484.07552S27.92448 244.65408 27.92448 512 244.65408 996.07552 512 996.07552c99.14368 0 191.31392-29.82912 268.06272-80.96768l-50.50368-53.62688c-63.62112 40.07936-138.96704 63.27296-219.71968 63.27296z" p-id="2773"></path><path d="M785.05984 403.10784l4.46464-105.96352s-126.03392-60.78464-310.6304-60.23168c-184.59648 0.55296-255.97952 65.24928-253.7472 153.36448 2.23232 88.1152 132.73088 142.76608 221.96224 170.6496 89.23136 27.88352 157.26592 45.73184 156.14976 81.98144-1.11616 36.2496-45.86496 48.51712-91.24864 47.96416s-204.31872-30.6688-282.95168-92.57984l-3.95264 120.46336s155.648 75.84768 324.06528 70.83008c168.41728-5.0176 255.97952-73.05216 254.30016-156.14976S700.29312 497.92 593.7664 464.45568s-173.44512-53.53472-172.88192-91.46368 127.71328-72.4992 364.17536 30.11584z" p-id="2774"></path></svg></button>
+					<input type="hidden" name="insite" value="www.daniao.org">
+				</span>
+			</form>
+		</div>
+				<div class="clear"></div>
+
+				<nav class="search-nav hz">
+			<h4 class="hz">搜索热点</h4>
+			<div class="clear"></div>
+			<div class="menu-%e6%90%9c%e7%b4%a2%e6%8e%a8%e8%8d%90-container"><ul id="menu-%e6%90%9c%e7%b4%a2%e6%8e%a8%e8%8d%90" class="search-menu"><li id="menu-item-3419" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-3419"><a href="../tag/宝塔面板/index.html">宝塔面板</a></li>
+<li id="menu-item-3421" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-3421"><a href="../tag/自建cdn/index.html">自建CDN</a></li>
+<li id="menu-item-3422" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-3422"><a href="../tag/bt宝塔面板命令大全/index.html">Bt(宝塔面板)命令大全</a></li>
+<li id="menu-item-10928" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10928"><a href="../tag/racknerd/index.html">RackNerd</a></li>
+<li id="menu-item-10929" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10929"><a href="../tag/搬瓦工/index.html">搬瓦工</a></li>
+<li id="menu-item-10930" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10930"><a href="../tag/腾讯云/index.html">腾讯云</a></li>
+<li id="menu-item-10931" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10931"><a href="../tag/wordpress/index.html">WordPress</a></li>
+<li id="menu-item-10932" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10932"><a href="../tag/pacificrack/index.html">PacificRack</a></li>
+<li id="menu-item-10933" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10933"><a href="../tag/ucloud优惠/index.html">UCloud优惠</a></li>
+</ul></div>		</nav>
+				<div class="clear"></div>
+	</div>
+	<div class="off-search-b">
+		<div class="clear"></div>
+	</div>
+	<div class="off-search dah fadeInDown animated"></div>
+</div>		<nav class="bread">
+		<div class="be-bread">
+			<div class="breadcrumb"><span class="seat"></span><a href="https://www.daniao.org/" rel="bookmark">首页</a><i class="be be-arrowright"></i><span><a href="../vps-control/index.html">VPS评测</a></span><i class="be be-arrowright"></i>正文</div>		</div>
+	</nav>
+		<div class="header-sub">
+					<div class="tg-m tg-site"><div style="margin: 0 0 5px 0;">
+<a href="../go/zji/index.html"  target="_blank" rel="nofollow"> 
+		<img src="../wp-content/uploads/2021/12/eezjj-1.jpg"></a>
+</div>
+<a href="../go/just/index.html"  target="_blank" rel="nofollow"> 
+		<img src="../wp-content/uploads/2022/01/just-ad-1.png"></a>
+</div>				<div class="clear"></div>
+	</div>
+
+
+	<div class="header-sub">
+			 	
+				<div class="clear"></div>
+	</div>
+	
+	<div class="header-sub">
+		<div id="header-widget" class="widget-sub-nav" data-aos=fade-up>
+						<div class="clear"></div>
+		</div>
+	</div>
+
+
+	
+	<div id="content" class="site-content site-small site-roll">
+		
+		<div id="primary" class="content-area meta-b">
+
+		<main id="main" class="site-main p-em" role="main">
+
+			
+				<article id="post-7291" data-aos=fade-up class="ms bk post-7291 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-pacificrack tag-pacificrack-vps tag-pacificrack5 tag-pacificrack3 tag-pacificrack- hgk">
+		<header class="entry-header entry-header-c">
+									<h1 class="entry-title">PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程</h1>						</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		
+						<div class="begin-single-meta begin-single-meta-c"><span class="my-date">2019年11月15日<i class="i-time">14:40:41</i></span><span class="meta-block"></span><span class="meta-cat"><i class="be be-sort ri"></i><a href="../vps-control/index.html" rel="category tag">VPS评测</a></span><span class="comment"><a href="index.html#comments"><i class="be be-speechbubble ri"></i>34</a></span><span class="views"><i class="be be-eye ri"></i>72,868</span><span class="reading-open">阅读模式</span></div><span class="reading-close bk dah"><i class="be be-cross"></i></span><span class="s-hide"><span class="off-side"></span></span>			
+							<div class="single-content">
+																<p>PacificRack的优惠码活动已经结束，目前最新的活动看这里：</p>
+<div class="mark_e mark"></p>
+<p><span style="color: #ff0000;"><a href="../8379.html/index.html" target="_blank">PacificRack便宜美国VPS低至$7.25/年，512M内存/10gSSD/500g流量</a></span></p>
+<p></div>
+<p>前几天比较火的<a href="../tag/pacificrack-vps/index.html" target="_blank">PacificRack VPS</a>，第一波上车的是3折，目前已无！目前仅剩5折(<del>优惠码：<span style="color: #ff0000;"><strong>VPS50OFF</strong></span></del>)。</p>
+<p>5折的优惠那么就需要自己比较一下了，目前这家购买机器是立马就可以激活的。前几天，因为太火爆的原因，买了机器需要2天左右才能激活。</p>
+<p>因为性价比还可以，所以大鸟也就入手一台，做一下测评，看看性能和速度到底如何，也给各位需要购买的同学做一个参考。</p>
+<div class='toc-box-h' name='toc-0'><h4 id='0' >一:注册</h4></div>
+<p>官网：<a href="https://pacificrack.com/portal/aff.php?aff=259" rel="external nofollow" target="_blank">https://pacificrack.com</a></p>
+<p>这家提供了中文界面，所以注册基本无障碍，流程也很简单，看图：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-1-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" class="aligncenter size-full wp-image-7292" src="../wp-content/uploads/2019/11/pacificrack-1-min.png" alt="" width="881" height="910" /></a></p>
+<p>手机不用写自己的，接码平台的手机号填一个就可以了。邮箱国内的也可以。</p>
+<div class='toc-box-h' name='toc-1'><h4 id='1' >二：购买</h4></div>
+<p>注册完，激活下邮箱，就可以购买产品了，购买也很简单，如图：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-2-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7293" src="../wp-content/uploads/2019/11/pacificrack-2-min.png" alt="" width="1141" height="516" /></a></p>
+<p>点击购买就可以了。付款方式：Visa，万事达卡，PayPal，支付宝，微信支付。所以付款无压力。</p>
+<div class='toc-box-h' name='toc-2'><h4 id='2' >三：VPS管理</h4></div>
+<p>新用户Pacificrack在开通后。你会收到一款开通邮件“New Virtual Server Is Ready!  ”里面有你需要的服务器信息。Root pass就是SSH登录密码。默认用户名root 默认端口22</p>
+<p>URL: https://master-stack01.pacificrack.com</p>
+<p>登录之后，如图：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-14-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7305" src="../wp-content/uploads/2019/11/pacificrack-14-min.png" alt="" width="1148" height="336" /></a>我们点击进去，就可以看到面板管理，至于你要重装系统可以看这里，如图：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-15-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7306" src="../wp-content/uploads/2019/11/pacificrack-15-min.png" alt="" width="808" height="873" /></a></p>
+<div class='toc-box-h' name='toc-3'><h4 id='3' >三：机器配置</h4></div>
+<p>大鸟购买的机器配置如下，默认带3GbpsDDoS防御。本次测试的机器是Node LAX-VT-STACK13</p>
+<ul>
+<li class="product-title">RAM: 1GB</li>
+<li class="product-title">SSD: 35 GB RAID-10</li>
+<li class="product-title">CPU: 2x Intel Xeon vCore</li>
+<li class="product-title">Transfer: 1TB/mo</li>
+<li class="product-title">Link speed: 1 Gigabit</li>
+<li class="product-title">DDoS Protection: 3Gbps</li>
+<li class="product-title">IP Space: 1 Free Dedicated IP Address</li>
+<li class="product-title">Virtualization: KVM</li>
+</ul>
+<div class='toc-box-h' name='toc-4'><h4 id='4'  id="4">四：IP WHOIS</h4></div>
+<ul>
+<li>测试ip：198.55.122.207</li>
+<li>City: Los Angeles</li>
+<li>Region: California</li>
+<li>Country: US</li>
+<li>Lat: 34.0522</li>
+<li>Long: -118.2437</li>
+<li>ISP: AS8100 QuadraNet Enterprises LLC</li>
+</ul>
+<div class='toc-box-h' name='toc-5'><h4 id='5' >五：配置测试</h4></div>
+<pre> 系统名称:		CentOS Linux 7.7.1908 (x86_64)
+ CPU型号:		QEMU Virtual CPU version 2.5+
+ CPU缓存大小:		16384 KB
+ CPU数量:		2 vCPU
+ 虚拟化类型:		KVM
+ 内存使用率:		192.63 MB / 990.81 MB
+ Swap使用率:		1.00 MB / 1024.00 MB
+ 引导设备:		/dev/vda1
+ 磁盘使用率:		1.80 GB / 34.96 GB
+ CPU负载:		8.8% used, 0.0% iowait, 0.0% steal
+ 系统负载(1/5/15min):	0.16 0.26 1.29 
+ CPU ST (仅供参考):	0.0%
+
+ -&gt; 网络信息
+
+ IPV4 - 本机IP:		198.55.122.207
+ IPV4 - ASN信息:	AS8100 ( 美国 加利福尼亚州 洛杉矶 )
+ IPV4 - 运营商:		quadranet.com
+</pre>
+<div class='toc-box-h' name='toc-6'><h4 id='6' >六：性能测试</h4></div>
+<p>unixbench跑分为880分。</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-3-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7294" src="../wp-content/uploads/2019/11/pacificrack-3-min.png" alt="" width="874" height="677" /></a></p>
+<div class='toc-box-h' name='toc-7'><h4 id='7' >七：磁盘性能测试</h4></div>
+<pre>I/O speed(1st run)   : 176 MB/s
+I/O speed(2nd run)   : 254 MB/s
+I/O speed(3rd run)   : 246 MB/s
+Average I/O speed    : 225.3 MB/s
+</pre>
+<div class='toc-box-h' name='toc-8'><h4 id='8' >八：服务器带宽测试</h4></div>
+<pre>Hosted by Bel Air Internet LLC (Los Angeles, CA) [0.90 km]: 2.632 ms
+Testing download speed................................................................................
+Download: 886.63 Mbit/s
+Testing upload speed................................................................................................
+Upload: 832.52 Mbit/s
+</pre>
+<div class='toc-box-h' name='toc-9'><h4 id='9' >九：路由测试</h4></div>
+<p>联通回程：</p>
+<pre>traceroute to 123.125.99.1 (123.125.99.1), 30 hops max, 60 byte packets
+ 1  72.11.140.145  0.99 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 2  96.44.175.34  3.82 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 3  204.152.204.2  1.66 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 4  207.254.191.125  5.10 ms  AS19174  美国 chinaunicom.com
+ 5  219.158.117.17  147.34 ms  AS4837  中国 北京 联通
+ 6  219.158.3.177  152.19 ms  AS4837  中国 北京 联通
+ 7  219.158.8.117  157.83 ms  AS4837  中国 广东 广州 联通
+ 8  219.158.15.33  171.86 ms  AS4837  中国 北京 联通
+ 9  124.65.194.102  166.26 ms  AS4808  中国 北京 联通
+10  61.148.159.38  167.96 ms  AS4808  中国 北京 联通
+11  61.135.113.158  146.68 ms  AS4808  中国 北京 联通
+12  61.135.113.158  165.46 ms  AS4808  中国 北京 联通
+13  *
+14  *
+15  123.125.99.1  167.82 ms  AS4808  中国 北京 联通
+</pre>
+<p>联通去程：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-4-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7295" src="../wp-content/uploads/2019/11/pacificrack-4-min.png" alt="" width="909" height="664" /></a></p>
+<p>移动回程：</p>
+<pre>traceroute to 211.136.88.117 (211.136.88.117), 30 hops max, 60 byte packets
+ 1  72.11.140.145  4.54 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 2  96.44.175.34  0.36 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 3  223.119.64.245  0.84 ms  AS58453  美国 移动
+ 4  223.120.6.17  0.89 ms  AS58453  美国 加利福尼亚州 洛杉矶 移动
+ 5  223.120.6.2  0.74 ms  AS58453  美国 加利福尼亚州 洛杉矶 移动
+ 6  *
+ 7  *
+ 8  *
+ 9  221.176.21.229  212.05 ms  AS9808  中国 北京 移动
+10  *
+11  211.136.88.117  202.16 ms  AS56048  中国 北京 移动
+</pre>
+<p>移动去程</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-5-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7296" src="../wp-content/uploads/2019/11/pacificrack-5-min.png" alt="" width="827" height="725" /></a></p>
+<p>电信回程</p>
+<pre>路由追踪到 上海电信 (TCP 模式, 最大 30 跃点)
+============================================================
+traceroute to 180.153.28.1 (180.153.28.1), 30 hops max, 60 byte packets
+ 1  72.11.140.145  10.91 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 2  96.44.175.34  0.31 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 3  96.44.163.153  0.51 ms  AS8100  美国 加利福尼亚州 洛杉矶 quadranet.com
+ 4  218.30.48.145  0.93 ms  AS4134  美国 加利福尼亚州 洛杉矶 ctamericas.com
+ 5  59.43.246.237  127.14 ms  AS4809  中国 上海 电信
+ 6  59.43.182.142  128.05 ms  AS4809  中国 上海 电信
+ 7  59.43.244.118  132.00 ms  AS4809  中国 上海 电信
+ 8  202.97.94.238  148.67 ms  AS4134  中国 上海 电信
+ 9  202.97.94.238  146.16 ms  AS4134  中国 上海 电信
+10  124.74.166.218  133.13 ms  AS4812  中国 上海 电信
+11  124.74.166.222  156.17 ms  AS4812  中国 上海 电信
+12  101.227.255.46  143.14 ms  AS4812  中国 上海 电信
+13  101.227.255.38  140.09 ms  AS4812  中国 上海 电信
+14  101.227.250.3  139.79 ms  AS4812  中国 上海 电信
+15  *
+16  *
+17  *
+18  101.227.250.3  144.75 ms  AS4812  中国 上海 电信
+19  180.153.28.1  129.89 ms  AS4812  中国 上海 电信</pre>
+<p>电信去程</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-6-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7297" src="../wp-content/uploads/2019/11/pacificrack-6-min.png" alt="" width="807" height="585" /></a></p>
+<p>三网都是直连，但是电信线路为CN2 GT，不是CN2  GIA，贴一个娃工的CN2 GIA路由表就你就秒懂了，什么是CN2 GIA：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-8-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7298" src="../wp-content/uploads/2019/11/pacificrack-8-min.png" alt="" width="794" height="378" /></a></p>
+<p>全程都是59开头 我们也看到了59.43.80.*这样的节点，更是可以断定这才是真的CN2 GIA线路，所以人家卖的贵也是有道理的。</p>
+<div class='toc-box-h' name='toc-10'><h4 id='10' >十：全国ping</h4></div>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-7-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7299" src="../wp-content/uploads/2019/11/pacificrack-7-min.png" alt="" width="1330" height="495" /></a></p>
+<div class='toc-box-h' name='toc-11'><h4 id='11' >十一：并发测试</h4></div>
+<p>测试了这台配置最大并发1000，虽然如此，也不能用来建站 。</p>
+<pre>Server Port:            80
+
+Document Path:          /
+Document Length:        1079 bytes
+
+Concurrency Level:      1000
+Time taken for tests:   3.592 seconds
+Complete requests:      10000
+Failed requests:        0
+Write errors:           0
+Total transferred:      13290000 bytes
+HTML transferred:       10790000 bytes
+Requests per second:    2784.10 [#/sec] (mean)
+Time per request:       359.182 [ms] (mean)
+Time per request:       0.359 [ms] (mean, across all concurrent requests)
+Transfer rate:          3613.35 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:      146  149   4.3    148     173
+Processing:   146  159  52.9    150     603
+Waiting:      146  158  52.8    149     603
+Total:        292  308  54.4    298     765
+
+Percentage of the requests served within a certain time (ms)
+  50%    298
+  66%    301
+  75%    303
+  80%    304
+  90%    313
+  95%    334
+  98%    350
+  99%    748
+ 100%    765 (longest request)
+</pre>
+<div class='toc-box-h' name='toc-12'><h4 id='12' >十二：油管测试</h4></div>
+<p>没装B-B#R江苏电信1080高清测试，速度很差，很卡，没法玩。</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-9-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7300" src="../wp-content/uploads/2019/11/pacificrack-9-min.png" alt="" width="716" height="248" /></a></p>
+<p>安装之后，1080测试，看起来瞬间流畅。没有问题了。4k的没有测试。</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-13-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7303" src="../wp-content/uploads/2019/11/pacificrack-13-min.png" alt="" width="713" height="209" /></a></p>
+<div class='toc-box-h' name='toc-13'><h4 id='13' >十三：宝塔跑分</h4></div>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-10-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7301" src="../wp-content/uploads/2019/11/pacificrack-10-min.png" alt="" width="805" height="493" /></a></p>
+<div class='toc-box-h' name='toc-14'><h4 id='14' >十四：在线测速</h4></div>
+<p>江苏电信speedtest测速，如图：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-11-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7302" src="../wp-content/uploads/2019/11/pacificrack-11-min.png" alt="" width="978" height="454" /></a></p>
+<p>郑州联通在线测速：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-12-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7304" src="../wp-content/uploads/2019/11/pacificrack-12-min.png" alt="" width="388" height="565" /></a></p>
+<p>深圳移动4G网络：</p>
+<p><a href="../wp-content/uploads/2019/11/pacificrack-16-min.png" data-fancybox="gallery"><img alt="PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程" loading="lazy" class="aligncenter size-full wp-image-7307" src="../wp-content/uploads/2019/11/pacificrack-16-min.png" alt="" width="460" height="568" /></a></p>
+<div class='toc-box-h' name='toc-15'><h4 id='15' >产品罗列</h4></div>
+<p>虽然不适合建站，但是我们跑个应用还是可以的。</p>
+<p><strong>5折优惠码</strong>：<strong>VPS50OFF</strong>（可月付、季付、半年、年付，周期灵活，续费不涨价）</p>
+<table>
+<tbody>
+<tr>
+<td><strong>内存</strong></td>
+<td><strong>SSD</strong></td>
+<td><strong>CPU</strong></td>
+<td><strong>流量</strong></td>
+<td><strong>IP数</strong></td>
+<td><strong>价格</strong></td>
+<td><strong>购买</strong></td>
+</tr>
+<tr>
+<td>512M</td>
+<td>25G</td>
+<td>1核</td>
+<td>0.5T/月</td>
+<td>1</td>
+<td>$12.5/年</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=1" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+<tr>
+<td>1G</td>
+<td>35G</td>
+<td>2核</td>
+<td>1.0T/月</td>
+<td>1</td>
+<td>$3.0/月</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=2" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+<tr>
+<td>2G</td>
+<td>45G</td>
+<td>3核</td>
+<td>2.0T/月</td>
+<td>1</td>
+<td>$5.0/月</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=3" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+<tr>
+<td>4G</td>
+<td>85G</td>
+<td>4核</td>
+<td>3.0T/月</td>
+<td>1</td>
+<td>$9.5/月</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=4" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+<tr>
+<td>6G</td>
+<td>120G</td>
+<td>5核</td>
+<td>4.0T/月</td>
+<td>1</td>
+<td>$14.0/月</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=5" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+<tr>
+<td>8G</td>
+<td>160G</td>
+<td>6核</td>
+<td>5.0T/月</td>
+<td>2</td>
+<td>$19.0/月</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=6" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+<tr>
+<td>16G</td>
+<td>320G</td>
+<td>7核</td>
+<td>10T/月</td>
+<td>2</td>
+<td>$37.5/月</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=7" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+<tr>
+<td>32G</td>
+<td>480G</td>
+<td>8核</td>
+<td>15T/月</td>
+<td>5</td>
+<td>$55.0/月</td>
+<td><strong><a href="https://pacificrack.com/portal/aff.php?aff=259&amp;pid=8" rel="external nofollow" target="_blank">链接</a></strong></td>
+</tr>
+</tbody>
+</table>
+<div class='toc-box-h' name='toc-16'><h4 id='16' >十五：总结</h4></div>
+<ol>
+<li>电信线路虽然走了CN2 GT，但是，不知道是不是因为超售的原因，线路一直处于爆炸状态。如果你不安装b--b==r是没法用的。</li>
+<li>油管视频，电信线路1080的没法看，卡的很。安装之后，瞬间流畅。</li>
+<li>建站就不要想了，拿来建站根本是对自己网站的不负责。</li>
+<li>磁盘性能不一般，机器综合性能一般。</li>
+<li>目前是5折的优惠，3折的已经没有了。所以买和不买要自己考虑了。</li>
+<li>工单处理速度非常的慢，基本上几天都没人理会。</li>
+<li>付款方式：Visa，万事达卡，PayPal，支付宝，微信支付</li>
+<li>流量计费：双向流量计费。</li>
+<li>DD 系统：可以。</li>
+<li>TCP加速也是支持的。</li>
+<li>网站支持中文，还算友好。</li>
+<li><span class="wp_keywordlink_affiliate">听说pacificrack是</span>quadranet机房的全资子品牌。</li>
+</ol>
+</p>			</div>
+							<div class="turn-small"></div>				<div class="sharing-box" data-aos="zoom-in">
+	<a class="zmy-btn-beshare zmy-btn-donate use-beshare-donate-btn bk dah" rel="external nofollow" data-hover="打赏"><div class="arrow-share"></div></a>	<a class="zmy-btn-beshare zmy-btn-like use-beshare-like-btn bk dah" data-count="" rel="external nofollow">
+		<span class="sharetip bz like-number">
+			点赞		</span>
+		<div class="triangle-down"></div>
+	</a>	<span class="favorite-box show-layer" data-show-layer="login-layer"><a class="zmy-btn-beshare bk no-favorite dah" rel="external nofollow"><span class="like-number sharetip bz">登录收藏</span><div class="triangle-down"></div></a></span>	<a class="zmy-btn-beshare zmy-btn-share use-beshare-social-btn bk dah" rel="external nofollow" data-hover="分享"><div class="arrow-share"></div></a>			<span class="post-link">https://www.daniao.org/7291.html</span>
+									<span class="zmy-btn-link-b copytip"></span>
+						<a class="tooltip zmy-btn-beshare zmy-btn-link zmy-btn-link-b use-beshare-link-btn bk dah" rel="external nofollow" onclick="myFunction()" onmouseout="outFunc()"><span class="sharetip bz copytip">复制链接</span></a>
+			<a class="tooltip zmy-btn-beshare zmy-btn-link zmy-btn-link-l use-beshare-link-btn bk dah" rel="external nofollow" onclick="myFunction()" onmouseout="outFunc()"><span class="sharetip bz copytipl">复制链接</span></a>
+				<a class="zmy-btn-beshare zmy-share-poster use-beshare-poster-btn bk dah" rel="external nofollow" data-hover="海报"><div class="arrow-share"></div></a></div>
+				<div class="s-weixin-one bky" data-aos="zoom-in">
+	<div class="weimg-one bky">
+		<img src="../wp-content/uploads/2020/10/wxgzh-2.jpg" alt="weinxin" />
+		<div class="weixin-h"><strong>微信公众号</strong></div>
+		<div class="weixin-h-w">关注大鸟博客公众号</div>
+		<div class="clear"></div>
+	</div>
+</div>
+	
+	<div class="content-empty"></div>
+		<footer class="single-footer">
+		<div class="single-cat-tag dah"><div class="single-cat dah"><i class="be be-sort"></i><a href="../vps-control/index.html" rel="category tag">VPS评测</a><span class="single-replace dah">最后更新：2020-3-6</span></div></div>	</footer>
+
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post -->
+
+<div class="single-tag"><ul class="be-tags"><li data-aos="zoom-in"><a href="../tag/pacificrack/index.html" rel="tag">PacificRack</a></li><li data-aos="zoom-in"><a href="../tag/pacificrack-vps/index.html" rel="tag">PacificRack VPS</a></li><li data-aos="zoom-in"><a href="../tag/pacificrack5折优惠码/index.html" rel="tag">PacificRack5折优惠码</a></li><li data-aos="zoom-in"><a href="../tag/pacificrack3折优惠码/index.html" rel="tag">PacificRack3折优惠码</a></li><li data-aos="zoom-in"><a href="../tag/pacificrack优惠码/index.html" rel="tag">PacificRack优惠码</a></li><li data-aos="zoom-in"><a href="../tag/pacificrack亚洲优化/index.html" rel="tag">pacificrack亚洲优化</a></li><li data-aos="zoom-in"><a href="../tag/pacificrack-测评/index.html" rel="tag">PacificRack 测评</a></li></ul></div>
+								<div class="slider-rolling-box ms bk" data-aos=fade-up>
+			<div id="slider-rolling" class="owl-carousel be-rolling single-rolling">
+									<div id="post-16828" class="scrolling-img post-16828 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-89 tag-bandwagonhost tag-vps tag-5370 tag-7153 tag-7488 tag-7492 tag-7493 tag-7494 hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16828.html"><img width="280" height="210" src="../wp-content/uploads/2021/03/bwh89-1-280x210.png" class="attachment-content size-content wp-post-image" alt="搬瓦工迪拜VPS测评分享 &#8211; 支持12个机房免费切换(中国香港GIA, 日本GIA除外)" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16828.html" rel="bookmark">搬瓦工迪拜VPS测评分享 &#8211; 支持12个机房免费切换(中国香港GIA, 日本GIA除外)</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16778" class="scrolling-img post-16778 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-vps tag-linode tag-linodevps tag-linode-vps hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16778.html"><img width="280" height="210" src="../wp-content/uploads/2019/05/Linode-280x210.jpg" class="attachment-content size-content wp-post-image" alt="linode日本东京VPS测评分享(AMD EPYC 7501处理器)" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16778.html" rel="bookmark">linode日本东京VPS测评分享(AMD EPYC 7501处理器)</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16716" class="scrolling-img post-16716 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-vultr tag-vps tag-4714 tag-vultrvps hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16716.html"><img width="280" height="210" src="../wp-content/uploads/2022/04/vultr-Mumbai-12-280x210.png" class="attachment-content size-content wp-post-image" alt="vultr印度孟买vps测评分享" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16716.html" rel="bookmark">vultr印度孟买vps测评分享</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16679" class="scrolling-img post-16679 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-virmach tag-virmach- tag-virmach-vps hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16679.html/index.html"><img width="280" height="210" src="../wp-content/uploads/2020/12/virmach-bf-1-280x210.png" class="attachment-content size-content wp-post-image" alt="Virmach日本东京机房的VPS(AMD+NVMe SSD)测评分享" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16679.html/index.html" rel="bookmark">Virmach日本东京机房的VPS(AMD+NVMe SSD)测评分享</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16658" class="scrolling-img post-16658 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-locvps tag-locvpsip tag-as9929-vps tag-as9929-as10099 tag-locvps- tag-cu2-vps tag-vps hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16658.html"><img width="280" height="210" src="../wp-content/uploads/2021/07/locvps-logo-1-280x210.jpg" class="attachment-content size-content wp-post-image" alt="locvps，美国CU2(AS9929 + AS10099线路) VPS测评分享" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16658.html" rel="bookmark">locvps，美国CU2(AS9929 + AS10099线路) VPS测评分享</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16623" class="scrolling-img post-16623 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-vps tag-ion-vps tag-ion tag-ion-krypt hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16623.html"><img width="280" height="210" src="../wp-content/uploads/2020/08/ionkrypt-asia-1-280x210.png" class="attachment-content size-content wp-post-image" alt="iON：美国夏威夷VPS新鲜测评分享" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16623.html" rel="bookmark">iON：美国夏威夷VPS新鲜测评分享</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16607" class="scrolling-img post-16607 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-vps tag-10gbiz hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16607.html"><img width="280" height="210" src="../wp-content/uploads/2021/05/10gbiz-1-280x210.png" class="attachment-content size-content wp-post-image" alt="10gbiz美国硅谷大硬盘VPS简单测评分享" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16607.html" rel="bookmark">10gbiz美国硅谷大硬盘VPS简单测评分享</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16586" class="scrolling-img post-16586 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-24 tag-vps tag-aoyoyun tag-4104 tag-4833 tag-as9929-vps tag-as9929 tag-as10099as9929 tag-as9929- tag-7034 hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16586.html"><img width="280" height="210" src="../wp-content/uploads/2021/02/aoyo-frankfurt-10-280x210.png" class="attachment-content size-content wp-post-image" alt="aoyoyun(傲游主机)：美国洛杉矶Kr机房VPS测评分享，联通AS10099+AS9929线路" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16586.html" rel="bookmark">aoyoyun(傲游主机)：美国洛杉矶Kr机房VPS测评分享，联通AS10099+AS9929线路</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16527" class="scrolling-img post-16527 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-locvps tag-cn2-vps tag-vps hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16527.html"><img width="280" height="210" src="../wp-content/uploads/2021/07/locvps-logo-1-280x210.jpg" class="attachment-content size-content wp-post-image" alt="Locvps，中国香港葵湾VPS测评分享（CN2+BGP混合线路）" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16527.html" rel="bookmark">Locvps，中国香港葵湾VPS测评分享（CN2+BGP混合线路）</a></h2>						<div class="clear"></div>
+					</div>
+									<div id="post-16504" class="scrolling-img post-16504 post type-post status-publish format-standard has-post-thumbnail hentry category-vps-control tag-vultr tag-vultr-vps tag-optimized-cloud-compute tag-cpu-optimized-vps tag-vultr- hgk" >
+						<div class="scrolling-thumbnail"><a class="sc" rel="external nofollow" href="../16504.html"><img width="280" height="210" src="../wp-content/uploads/2022/03/vultr-Optimized-Cloud-Compute-14-280x210.png" class="attachment-content size-content wp-post-image" alt="Vultr：高性能EPYC(霄龙)云服务器测评分享，$28/月起(100%NVMe SSD存储，第三代AMD EPYC™处理器)" loading="lazy" /></a></div>
+						<div class="clear"></div>
+						<h2 class="grid-title over"><a href="../16504.html" rel="bookmark">Vultr：高性能EPYC(霄龙)云服务器测评分享，$28/月起(100%NVMe SSD存储，第三代AMD EPYC™处理器)</a></h2>						<div class="clear"></div>
+					</div>
+											</div>
+		</div>
+	
+									<div class="authorbio ms bk load" data-aos=fade-up>
+					<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />				<ul class="spostinfo">
+										<li class="reprinted">除非特殊声明，本站文章均为原创，转载请务必保留本文链接</li>
+						<li class="reprinted"><a href="index.html">PacificRack VPS速度与性能测评 &#8211; 附注册和vps管理教程</a></li>
+			</ul>
+	<div class="clear"></div>
+</div>
+				
+				<nav class="post-nav-img" data-aos=fade-up>
+					<div class="nav-img-box post-previous-box ms bk hz">
+					<figure class="nav-thumbnail"><span class="load"><a class="sc" rel="external nofollow" href="../7287.html/index.html"><img src="../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2019/04/Nginx-logo-1-280x210.png" alt="宝塔面板7.X不能安装nginx的解决方法" width="280" height="210" ></a></span></figure>
+					<a href="../7287.html/index.html">
+						<div class="nav-img post-previous-img">
+							<div class="post-nav">上一篇</div>
+							<div class="nav-img-t">宝塔面板7.X不能安装nginx的解决方法</div>
+						</div>
+					</a>
+				</div>
+								<div class="nav-img-box post-next-box ms bk">
+					<figure class="nav-thumbnail"><span class="load"><a class="sc" rel="external nofollow" href="../7310.html/index.html"><img src="../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2019/11/429error-280x210.jpg" alt="WordPress 429 Too Many Request后如何更新版本的方法总结" width="280" height="210" ></a></span></figure>
+					<a href="../7310.html/index.html">
+						<div class="nav-img post-next-img">
+							<div class="post-nav">下一篇</div>
+							<div class="nav-img-t">WordPress 429 Too Many Request后如何更新版本的方法总结</div>
+						</div>
+					</a>
+				</div>
+					<div class="clear"></div>
+</nav>
+
+				
+				
+				<div id="single-widget">
+	<div class="single-wt" data-aos=fade-up>
+		<aside id="related_post-3" class="widget related_post ms bk" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>相关文章</h3>
+<div class="post_cat">
+			<ul>
+		
+							<li class="srm"><a href="../1062.html" rel="bookmark">pacificrack：美国优化线路VPS，5折+买2送1，续费同价</a></li>
+			
+		
+							<li class="srm"><a href="../15651.html" rel="bookmark">pacificrack黑五优惠：混合服务器3折，低至$30/月，E5-2650v2/16G/240G/30T流量/100M带宽(加3$可升级1G)</a></li>
+			
+		
+							<li class="srm"><a href="../15215.html" rel="bookmark">pacificrack：VPS中秋促销，$19.20/年，4核/4G/25G SSD/2.5T月流量/G口带宽</a></li>
+			
+		
+							<li class="srm"><a href="../15181.html" rel="bookmark">pacificrack，秋季便宜美国VPS促销，$18/年， 1核/2G内存/30G SSD/1G带宽/3T流量，带windows</a></li>
+			
+		
+							<li class="srm"><a href="../14945.html/index.html" rel="bookmark">pacificrack，便宜vps秋季促销，$18/年，2核/4G内存/50gSSD/5T流量/1G带宽，可选Windows</a></li>
+			
+			</ul>
+</div>
+
+<div class="clear"></div></aside><aside id="hot_comment-4" class="widget hot_comment ms bk" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>热评文章</h3>
+<div id="hot_comment_widget" class="widget-li-icon">
+			<ul>
+					
+<li class='srm'><span class='li-icon li-icon-1'>1</span><a href= "../16520.html/index.html" rel="bookmark" title=" (14条评论)" >宝塔面板docker安装umami</a></li>
+<li class='srm'><span class='li-icon li-icon-2'>2</span><a href= "../5422.html/index.html" rel="bookmark" title=" (11条评论)" >宝塔面板安装 EasyImag - 一款最简单图床的安装体验</a></li>
+<li class='srm'><span class='li-icon li-icon-3'>3</span><a href= "../12863.html/index.html" rel="bookmark" title=" (8条评论)" >BuyVM：VPS/块存储补货通知 - AMD高性能VPS+超便宜块存储+1Gbps带宽(不限流量)，有Windows</a></li>
+<li class='srm'><span class='li-icon li-icon-4'>4</span><a href= "../16643.html/index.html" rel="bookmark" title=" (7条评论)" >Virmach AMD Ryzen+NVMe系列VPS促销，低至$30/2年(1核/768M内存/20GNVMe/1T@2T流量)</a></li>
+<li class='srm'><span class='li-icon li-icon-5'>5</span><a href= "../16679.html/index.html" rel="bookmark" title=" (4条评论)" >Virmach日本东京机房的VPS(AMD+NVMe SSD)测评分享</a></li>					</ul>
+</div>
+
+<div class="clear"></div></aside>	</div>
+	<div class="clear"></div>
+</div>
+
+				
+				
+				<div class="scroll-comments"></div>
+<!-- 引用 -->
+
+<div id="comments" class="comments-area">
+			<div id="respond" class="comment-respond ms bk da" data-aos=fade-up>
+							<form action="https://www.daniao.org/wp-comments-post.php" method="post" id="commentform">
+											<div class="comment-user-inf">
+															<div class="user-avatar load">
+																		<img alt="匿名" src="data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=" data-original="">
+								</div>
+														<div class="comment-user-inc">
+								<h3 id="reply-title" class="comment-reply-title">
+									<span>发表评论</span>
+								</h3>
+								<span class="comment-user-name">匿名网友</span>
+								<span class="comment-user-alter"></span>
+							</div>
+						</div>
+					
+					
+					<div class="comment-form-comment">
+													<textarea id="comment" class="da" name="comment" rows="4" tabindex="1" placeholder="评论人工审核，如果捉急的可以入群找站长。" onfocus="this.placeholder=''" onblur="this.placeholder='评论人工审核，如果捉急的可以入群找站长。'"></textarea>
+												<p class="comment-tool bgt">
+							<a class="tool-img bgt bky" href='javascript:embedImage();' title="插入图片"><i class="icon-img"></i><i class="be be-picture"></i></a>							<a class="emoji bgt bky" href="index.html" title="插入表情"><i class="be be-insertemoticon"></i></a>															<p class="emoji-box">
+									<script type="text/javascript">
+function grin(obj) { 
+	var val = document.getElementById('comment').value; 
+	document.getElementById('comment').value = val + " " + obj + " "; 
+}
+</script>
+
+<a href="javascript:grin(':?:')"><img src="../wp-content/themes/begin/img/smilies/icon_question.gif" alt=":?:" title="疑问" /></a>
+<a href="javascript:grin(':razz:')"><img src="../wp-content/themes/begin/img/smilies/icon_razz.gif" alt=":razz:" title="调皮" /></a>
+<a href="javascript:grin(':sad:')"><img src="../wp-content/themes/begin/img/smilies/icon_sad.gif" alt=":sad:" title="难过" /></a>
+<a href="javascript:grin(':evil:')"><img src="../wp-content/themes/begin/img/smilies/icon_evil.gif" alt=":evil:" title="抠鼻" /></a>
+<a href="javascript:grin(':!:')"><img src="../wp-content/themes/begin/img/smilies/icon_exclaim.gif" alt=":!:" title="吓" /></a>
+<a href="javascript:grin(':smile:')"><img src="../wp-content/themes/begin/img/smilies/icon_smile.gif" alt=":smile:" title="微笑" /></a>
+<a href="javascript:grin(':oops:')"><img src="../wp-content/themes/begin/img/smilies/icon_redface.gif" alt=":oops:" title="憨笑" /></a>
+<a href="javascript:grin(':grin:')"><img src="../wp-content/themes/begin/img/smilies/icon_biggrin.gif" alt=":grin:" title="坏笑" /></a>
+<a href="javascript:grin(':eek:')"><img src="../wp-content/themes/begin/img/smilies/icon_surprised.gif" alt=":eek:" title="惊讶" /></a>
+<a href="javascript:grin(':shock:')"><img src="../wp-content/themes/begin/img/smilies/icon_eek.gif" alt=":shock:" title="发呆" /></a>
+<a href="javascript:grin(':???:')"><img src="../wp-content/themes/begin/img/smilies/icon_confused.gif" alt=":???:" title="撇嘴" /></a>
+<a href="javascript:grin(':cool:')"><img src="../wp-content/themes/begin/img/smilies/icon_cool.gif" alt=":cool:" title="大兵" /></a>
+<a href="javascript:grin(':lol:')"><img src="../wp-content/themes/begin/img/smilies/icon_lol.gif" alt=":lol:" title="偷笑" /></a>
+<a href="javascript:grin(':mad:')"><img src="../wp-content/themes/begin/img/smilies/icon_mad.gif" alt=":mad:" title="咒骂" /></a>
+<a href="javascript:grin(':twisted:')"><img src="../wp-content/themes/begin/img/smilies/icon_twisted.gif" alt=":twisted:" title="发怒" /></a>
+<a href="javascript:grin(':roll:')"><img src="../wp-content/themes/begin/img/smilies/icon_rolleyes.gif" alt=":roll:" title="白眼" /></a>
+<a href="javascript:grin(':wink:')"><img src="../wp-content/themes/begin/img/smilies/icon_wink.gif" alt=":wink:" title="鼓掌" /></a>
+<a href="javascript:grin(':idea:')"><img src="../wp-content/themes/begin/img/smilies/icon_idea.gif" alt=":idea:" title="酷" /></a>
+<a href="javascript:grin(':arrow:')"><img src="../wp-content/themes/begin/img/smilies/icon_arrow.gif" alt=":arrow:" title="擦汗" /></a>
+<a href="javascript:grin(':neutral:')"><img src="../wp-content/themes/begin/img/smilies/icon_neutral.gif" alt=":neutral:" title="亲亲" /></a>
+<a href="javascript:grin(':cry:')"><img src="../wp-content/themes/begin/img/smilies/icon_cry.gif" alt=":cry:" title="大哭" /></a>
+<a href="javascript:grin(':mrgreen:')"><img src="../wp-content/themes/begin/img/smilies/icon_mrgreen.gif" alt=":mrgreen:" title="呲牙" /></a>
+<br />								</p>
+																						<div class="add-img-box yy da bk">
+								<div class="add-img-main">
+									<div><textarea class="img-url dah bk" rows="3" placeholder="插入图片地址" value=" + "/></textarea></div>
+									<div class="add-img-but bk dah">确定</div>
+									<span class="arrow-down"></span>
+								</div>
+								</div>
+													</p>
+					</div>
+
+											<div id="comment-author-info" class="comment-info">
+							<p class="comment-form-author pcd">
+								<label class="bk da" for="author">昵称</span></label>
+								<input type="text" name="author" id="author" class="commenttext da" value="" tabindex="2" required="required" />
+								<span class="required bgt"><i class="be be-loader"></i>							</p>
+															<p class="comment-form-email pcd">
+									<label class="bk da" for="email">邮箱</label>
+									<input type="text" name="email" id="email" class="commenttext da" value="" tabindex="3" required="required" />
+									<span class="required bgt"><i class="be be-loader"></i></span>
+								</p>
+																													<div class="clear"></div>
+						</div>
+					
+					<p class="form-submit">
+						<input id="submit" class="bk dah" name="submit" type="submit" tabindex="5" value="提交"/>
+					</p>
+
+					<div class="cancel-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond" style="display:none;">&nbsp;</a></div>
+
+											<div class="qaptcha-box">
+							<div class="unlocktip" data-hover="滑动解锁"></div>
+							<div class="qaptcha"></div>
+						</div>
+					
+					<input type='hidden' name='comment_post_ID' value='7291' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+				</form>
+
+	 				</div>
+	
+	
+	
+				<div class="comments-title ms bk" data-aos=fade-up>
+			评论：34 &nbsp;&nbsp;其中：访客&nbsp;&nbsp;23 &nbsp;&nbsp;博主&nbsp;&nbsp;11  					</div>
+		
+		<ol class="comment-list">
+
+							
+	<li class="comments-anchor"><ul id="anchor-comment-4216"></ul></li>
+	<li class="comment even thread-even depth-1 parent ms bk da" id="comment-4216" data-aos=fade-up>
+			<div id="div-comment-4216" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='猫叔' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/dad81aeff91ab19368c13bfe7ac7af9c96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong><a href="https://www.tmioe.com/" rel="external nofollow" target="_blank" rel='external nofollow ugc' class='url'>猫叔</a></strong>
+				<a class="vip vip6" title="评论达人 VIP.6"><i class="be be-favorite"></i><span class="lv">6</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4216"></a><br />
+			<span class="comment-aux">
+				2019年11月15日				<span class="comment-time">下午5:53</span>
+				
+				
+									<span class="floor">
+						<span class='floor-c floor-s'><i>1</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4216' onclick='return addComment.moveForm( "div-comment-4216", "4216", "respond", "7291" )' aria-label='回复给猫叔'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>总结，这是一个辣鸡</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-4220"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 ms bk da" id="comment-4220" data-aos=fade-up>
+			<div id="div-comment-4220" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4220"></a><br />
+			<span class="comment-aux">
+				2019年11月15日				<span class="comment-time">下午8:19</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4220' onclick='return addComment.moveForm( "div-comment-4220", "4220", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-4216">猫叔</a></span> 额，也不能这么说，总归富强还是不错的。</p>
+			</div>
+	</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-9844"></ul></li>
+	<li class="comment even depth-2 parent ms bk da" id="comment-9844" data-aos=fade-up>
+			<div id="div-comment-9844" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='Admnistrator' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>Admnistrator</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-9844"></a><br />
+			<span class="comment-aux">
+				2020年5月18日				<span class="comment-time">上午10:41</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-9844' onclick='return addComment.moveForm( "div-comment-9844", "9844", "respond", "7291" )' aria-label='回复给Admnistrator'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-4216">猫叔</a></span> 是的，所以pacificrack不推荐大家使用，很不稳定，有问题工单不回复消息，VPS一直处于瘫痪状态，但是一直在销售，不知道还有多人会被坑</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-9845"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-3 ms bk da" id="comment-9845" data-aos=fade-up>
+			<div id="div-comment-9845" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-9845"></a><br />
+			<span class="comment-aux">
+				2020年5月18日				<span class="comment-time">上午10:42</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B2</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-9845' onclick='return addComment.moveForm( "div-comment-9845", "9845", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-9844">Admnistrator</a></span> 其实偶尔的时候，也能飞起 <img src="../wp-content/themes/begin/img/smilies/icon_lol.gif" alt=":lol:" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-4226"></ul></li>
+	<li class="comment even thread-odd thread-alt depth-1 parent ms bk da" id="comment-4226" data-aos=fade-up>
+			<div id="div-comment-4226" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='奶爸建网站笔记' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/74242ff548975ef430c690678bd4961596.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong><a href="https://blog.naibabiji.com" rel="external nofollow" target="_blank" rel='external nofollow ugc' class='url'>奶爸建网站笔记</a></strong>
+				<a class="vip vip7" title="评论达人 VIP.7"><i class="be be-favorite"></i><span class="lv">7</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4226"></a><br />
+			<span class="comment-aux">
+				2019年11月16日				<span class="comment-time">下午12:28</span>
+				
+				
+									<span class="floor">
+						<span class='floor-c floor-b'><i>2</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4226' onclick='return addComment.moveForm( "div-comment-4226", "4226", "respond", "7291" )' aria-label='回复给奶爸建网站笔记'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>这家的应该就是国人商家，我也不打算在上面跑网站了。售后规则改了，促销机不支持退款。</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-4227"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 ms bk da" id="comment-4227" data-aos=fade-up>
+			<div id="div-comment-4227" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4227"></a><br />
+			<span class="comment-aux">
+				2019年11月16日				<span class="comment-time">下午1:28</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4227' onclick='return addComment.moveForm( "div-comment-4227", "4227", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-4226">奶爸建网站笔记</a></span> 你说的很对，这家只能跑应用了。不能建站。</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-4229"></ul></li>
+	<li class="comment even thread-even depth-1 parent ms bk da" id="comment-4229" data-aos=fade-up>
+			<div id="div-comment-4229" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='阿提密斯' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>阿提密斯</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4229"></a><br />
+			<span class="comment-aux">
+				2019年11月16日				<span class="comment-time">下午3:58</span>
+				
+				
+									<span class="floor">
+						<span class='floor-c floor-d'><i>3</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4229' onclick='return addComment.moveForm( "div-comment-4229", "4229", "respond", "7291" )' aria-label='回复给阿提密斯'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>大鸟 想建个wp的站，国内访问，想放在国外，有什么性价比高的vps推荐么</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-4231"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 ms bk da" id="comment-4231" data-aos=fade-up>
+			<div id="div-comment-4231" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4231"></a><br />
+			<span class="comment-aux">
+				2019年11月16日				<span class="comment-time">下午8:30</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4231' onclick='return addComment.moveForm( "div-comment-4231", "4231", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-4229">阿提密斯</a></span> 现在ion香的很，看这篇文章参考下。https://www.daniao.org/7196.html</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-4249"></ul></li>
+	<li class="comment even thread-odd thread-alt depth-1 parent ms bk da" id="comment-4249" data-aos=fade-up>
+			<div id="div-comment-4249" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='张波博客' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/679666f7bd1af3e55f0e51dd70ed161c96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong><a href="https://zhang.bo" rel="external nofollow" target="_blank" rel='external nofollow ugc' class='url'>张波博客</a></strong>
+				<a class="vip vip6" title="评论达人 VIP.6"><i class="be be-favorite"></i><span class="lv">6</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4249"></a><br />
+			<span class="comment-aux">
+				2019年11月17日				<span class="comment-time">下午5:02</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>4</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4249' onclick='return addComment.moveForm( "div-comment-4249", "4249", "respond", "7291" )' aria-label='回复给张波博客'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>看来你是测评专家呀，什么都知道</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-4250"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 ms bk da" id="comment-4250" data-aos=fade-up>
+			<div id="div-comment-4250" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4250"></a><br />
+			<span class="comment-aux">
+				2019年11月17日				<span class="comment-time">下午5:14</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4250' onclick='return addComment.moveForm( "div-comment-4250", "4250", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-4249">张波博客</a></span> 这家目前买的人很多，所以需要测评，给别人做个参考。</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-4401"></ul></li>
+	<li class="comment even thread-even depth-1 parent ms bk da" id="comment-4401" data-aos=fade-up>
+			<div id="div-comment-4401" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='小鸡' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>小鸡</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4401"></a><br />
+			<span class="comment-aux">
+				2019年11月24日				<span class="comment-time">下午8:40</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>5</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4401' onclick='return addComment.moveForm( "div-comment-4401", "4401", "respond", "7291" )' aria-label='回复给小鸡'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>表示这家真的很辣鸡，付款超24小时才开通，有些不发工单的两三天都不给你开通，开通发现连不上，重装了几次系统本地挂了代理也没用，ping也ping不通，不知道是不是禁ping，SSH也连不上，还不如VirMach家的（这家也一样不推荐）</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-4402"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 ms bk da" id="comment-4402" data-aos=fade-up>
+			<div id="div-comment-4402" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4402"></a><br />
+			<span class="comment-aux">
+				2019年11月24日				<span class="comment-time">下午9:14</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4402' onclick='return addComment.moveForm( "div-comment-4402", "4402", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-4401">小鸡</a></span> 额，现在好点了吧。我买了立马就开通了啊。但是开通会有ping不上的现象。跑个应用还是可以的。</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-4609"></ul></li>
+	<li class="comment even thread-odd thread-alt depth-1 parent ms bk da" id="comment-4609" data-aos=fade-up>
+			<div id="div-comment-4609" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='一起微笑' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/93c789302a8da35728f0a1a5c88ac34496.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong><a href="https://www.sweetly.cn" rel="external nofollow" target="_blank" rel='external nofollow ugc' class='url'>一起微笑</a></strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4609"></a><br />
+			<span class="comment-aux">
+				2019年12月4日				<span class="comment-time">下午11:42</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>6</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4609' onclick='return addComment.moveForm( "div-comment-4609", "4609", "respond", "7291" )' aria-label='回复给一起微笑'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>我买的$18.95 ，宝塔跑分才4千多分，什么情况</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-4610"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 ms bk da" id="comment-4610" data-aos=fade-up>
+			<div id="div-comment-4610" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-4610"></a><br />
+			<span class="comment-aux">
+				2019年12月4日				<span class="comment-time">下午11:57</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-4610' onclick='return addComment.moveForm( "div-comment-4610", "4610", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-4609">一起微笑</a></span> 不是512内存的么，小鸡能跑这么多也错了吧。</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-5270"></ul></li>
+	<li class="comment even thread-even depth-1 parent ms bk da" id="comment-5270" data-aos=fade-up>
+			<div id="div-comment-5270" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='小凶许' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>小凶许</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-5270"></a><br />
+			<span class="comment-aux">
+				2020年1月6日				<span class="comment-time">上午2:25</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>7</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-5270' onclick='return addComment.moveForm( "div-comment-5270", "5270", "respond", "7291" )' aria-label='回复给小凶许'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>买了7.25刀的，专门用来嘿嘿嘿,暂时没出问题</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-6775"></ul></li>
+	<li class="comment odd alt depth-2 ms bk da" id="comment-6775" data-aos=fade-up>
+			<div id="div-comment-6775" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='pacificrack受骗了' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>pacificrack受骗了</strong>
+				<a class="vip vip1" title="评论达人 VIP.1"><i class="be be-favorite"></i><span class="lv">1</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-6775"></a><br />
+			<span class="comment-aux">
+				2020年3月15日				<span class="comment-time">上午9:14</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-6775' onclick='return addComment.moveForm( "div-comment-6775", "6775", "respond", "7291" )' aria-label='回复给pacificrack受骗了'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-5270">小凶许</a></span> 你的多久开通了，我的付款了没有给开通。网站是不是行骗的</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-5713"></ul></li>
+	<li class="comment even thread-odd thread-alt depth-1 parent ms bk da" id="comment-5713" data-aos=fade-up>
+			<div id="div-comment-5713" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='jasonxiang' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>jasonxiang</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-5713"></a><br />
+			<span class="comment-aux">
+				2020年2月4日				<span class="comment-time">下午1:01</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>8</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-5713' onclick='return addComment.moveForm( "div-comment-5713", "5713", "respond", "7291" )' aria-label='回复给jasonxiang'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>刚刚买了它家的特价一年vps，创建好实例后，ipip上全线ip ping不通。。。怎么办？</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-5715"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 ms bk da" id="comment-5715" data-aos=fade-up>
+			<div id="div-comment-5715" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-5715"></a><br />
+			<span class="comment-aux">
+				2020年2月4日				<span class="comment-time">下午2:52</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-5715' onclick='return addComment.moveForm( "div-comment-5715", "5715", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-5713">jasonxiang</a></span> 登录他家的管理面板重装系统，可以解决。</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-5727"></ul></li>
+	<li class="comment even thread-even depth-1 ms bk da" id="comment-5727" data-aos=fade-up>
+			<div id="div-comment-5727" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='乐乐001' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>乐乐001</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-5727"></a><br />
+			<span class="comment-aux">
+				2020年2月5日				<span class="comment-time">上午8:38</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>9</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-5727' onclick='return addComment.moveForm( "div-comment-5727", "5727", "respond", "7291" )' aria-label='回复给乐乐001'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>重装了不下20次，ssh连接还总是说密码错误</p>
+			</div>
+	</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-5780"></ul></li>
+	<li class="comment odd alt thread-odd thread-alt depth-1 ms bk da" id="comment-5780" data-aos=fade-up>
+			<div id="div-comment-5780" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='zong7' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>zong7</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-5780"></a><br />
+			<span class="comment-aux">
+				2020年2月7日				<span class="comment-time">下午5:20</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>10</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-5780' onclick='return addComment.moveForm( "div-comment-5780", "5780", "respond", "7291" )' aria-label='回复给zong7'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>鸟叔，请问并发测试怎么玩？有一键脚本？</p>
+			</div>
+	</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-6776"></ul></li>
+	<li class="comment even thread-even depth-1 parent ms bk da" id="comment-6776" data-aos=fade-up>
+			<div id="div-comment-6776" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='pacificrack受骗了' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>pacificrack受骗了</strong>
+				<a class="vip vip1" title="评论达人 VIP.1"><i class="be be-favorite"></i><span class="lv">1</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-6776"></a><br />
+			<span class="comment-aux">
+				2020年3月15日				<span class="comment-time">上午9:15</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>11</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-6776' onclick='return addComment.moveForm( "div-comment-6776", "6776", "respond", "7291" )' aria-label='回复给pacificrack受骗了'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>https://pacificrack.com/  这个网站买的VPS  付钱后不给开通   联系也不回复！大家千万不要上当受骗！</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-6777"></ul></li>
+	<li class="comment byuser bypostauthor odd alt depth-2 parent ms bk da" id="comment-6777" data-aos=fade-up>
+			<div id="div-comment-6777" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-6777"></a><br />
+			<span class="comment-aux">
+				2020年3月15日				<span class="comment-time">上午9:22</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-6777' onclick='return addComment.moveForm( "div-comment-6777", "6777", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-6776">pacificrack受骗了</a></span> 额，还有这事情？你稍微等等。不要急。</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-7330"></ul></li>
+	<li class="comment even depth-3 ms bk da" id="comment-7330" data-aos=fade-up>
+			<div id="div-comment-7330" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='我是谁我在哪儿' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>我是谁我在哪儿</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-7330"></a><br />
+			<span class="comment-aux">
+				2020年3月29日				<span class="comment-time">上午1:06</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B2</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-7330' onclick='return addComment.moveForm( "div-comment-7330", "7330", "respond", "7291" )' aria-label='回复给我是谁我在哪儿'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-6777">大鸟</a></span> 刚买的VPS 主IP ping不通啊？难道是GG了？ vnc的IP到是可以。。</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-7829"></ul></li>
+	<li class="comment odd alt thread-odd thread-alt depth-1 parent ms bk da" id="comment-7829" data-aos=fade-up>
+			<div id="div-comment-7829" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='James Qian' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>James Qian</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-7829"></a><br />
+			<span class="comment-aux">
+				2020年4月9日				<span class="comment-time">上午2:59</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>12</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-7829' onclick='return addComment.moveForm( "div-comment-7829", "7829", "respond", "7291" )' aria-label='回复给James Qian'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>上当受骗了，ssh连不上 ping不通 工单不回  重装不下50次无解   已经一周了  天地良心这么黑心的商家推出来害人啊<br />
+。浪费我70元  花钱买教训了</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-7830"></ul></li>
+	<li class="comment byuser bypostauthor even depth-2 parent ms bk da" id="comment-7830" data-aos=fade-up>
+			<div id="div-comment-7830" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-7830"></a><br />
+			<span class="comment-aux">
+				2020年4月9日				<span class="comment-time">上午7:01</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-7830' onclick='return addComment.moveForm( "div-comment-7830", "7830", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-7829">James Qian</a></span> 额，说实话，这篇文章刚发的时候，商家还是不错的。现在变成这个样子，非我所愿，文章也仅供参考。</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-8483"></ul></li>
+	<li class="comment odd alt depth-3 parent ms bk da" id="comment-8483" data-aos=fade-up>
+			<div id="div-comment-8483" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='彭小呆' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>彭小呆</strong>
+				<a class="vip vip1" title="评论达人 VIP.1"><i class="be be-favorite"></i><span class="lv">1</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-8483"></a><br />
+			<span class="comment-aux">
+				2020年4月22日				<span class="comment-time">上午11:29</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B2</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-8483' onclick='return addComment.moveForm( "div-comment-8483", "8483", "respond", "7291" )' aria-label='回复给彭小呆'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-7830">大鸟</a></span> b&#8211;b==r   的教程有吗</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-8484"></ul></li>
+	<li class="comment byuser bypostauthor even depth-4 ms bk da" id="comment-8484" data-aos=fade-up>
+			<div id="div-comment-8484" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='大鸟' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/4300d99c5105ba50757d2f89ec6c5c2a96.png' class='avatar avatar-96 photo' height='96' width='96' />							</div>
+		
+		<strong>大鸟</strong>
+		<span class="author-mark author-admin"><i class="be be-personoutline" title="管理员"></i></span>				<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-8484"></a><br />
+			<span class="comment-aux">
+				2020年4月22日				<span class="comment-time">上午11:35</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B3</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-8484' onclick='return addComment.moveForm( "div-comment-8484", "8484", "respond", "7291" )' aria-label='回复给大鸟'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-8483">彭小呆</a></span> https://www.daniao.org/3854.html</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-8482"></ul></li>
+	<li class="comment odd alt depth-2 ms bk da" id="comment-8482" data-aos=fade-up>
+			<div id="div-comment-8482" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='彭小呆' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>彭小呆</strong>
+				<a class="vip vip1" title="评论达人 VIP.1"><i class="be be-favorite"></i><span class="lv">1</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-8482"></a><br />
+			<span class="comment-aux">
+				2020年4月22日				<span class="comment-time">上午11:29</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-8482' onclick='return addComment.moveForm( "div-comment-8482", "8482", "respond", "7291" )' aria-label='回复给彭小呆'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-7829">James Qian</a></span> 现在能用吗？</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-9605"></ul></li>
+	<li class="comment even thread-even depth-1 parent ms bk da" id="comment-9605" data-aos=fade-up>
+			<div id="div-comment-9605" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='哈哈' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>哈哈</strong>
+				<a class="vip vip1" title="评论达人 VIP.1"><i class="be be-favorite"></i><span class="lv">1</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-9605"></a><br />
+			<span class="comment-aux">
+				2020年5月12日				<span class="comment-time">下午11:07</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>13</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-9605' onclick='return addComment.moveForm( "div-comment-9605", "9605", "respond", "7291" )' aria-label='回复给哈哈'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>这个商家不行，vps出问题了，无法开启，工单一开始又回复，可能后面觉得解决不了就不回复</p>
+			</div>
+	<ul class="children">
+
+	<li class="comments-anchor"><ul id="anchor-comment-9606"></ul></li>
+	<li class="comment odd alt depth-2 ms bk da" id="comment-9606" data-aos=fade-up>
+			<div id="div-comment-9606" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='哈哈' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>哈哈</strong>
+				<a class="vip vip1" title="评论达人 VIP.1"><i class="be be-favorite"></i><span class="lv">1</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-9606"></a><br />
+			<span class="comment-aux">
+				2020年5月12日				<span class="comment-time">下午11:13</span>
+				
+				
+									<span class="floor">
+												<span class="floor-c floor-l floor-l-b">B1</span>					</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-9606' onclick='return addComment.moveForm( "div-comment-9606", "9606", "respond", "7291" )' aria-label='回复给哈哈'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p><span class="at">@ <a href="index.html#comment-9605">哈哈</a></span> 刚刚一看，时隔十天终于回复我了</p>
+			</div>
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-10129"></ul></li>
+	<li class="comment even thread-odd thread-alt depth-1 ms bk da" id="comment-10129" data-aos=fade-up>
+			<div id="div-comment-10129" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='aaaxiong' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>aaaxiong</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-10129"></a><br />
+			<span class="comment-aux">
+				2020年5月24日				<span class="comment-time">下午2:14</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>14</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-10129' onclick='return addComment.moveForm( "div-comment-10129", "10129", "respond", "7291" )' aria-label='回复给aaaxiong'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>买了不会弄，那个大佬教一下小弟，都登陆不进图形界面，黑白字体看不懂，登陆VNC帐号可以输入，密码输入不了</p>
+			</div>
+	</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-12646"></ul></li>
+	<li class="comment odd alt thread-even depth-1 ms bk da" id="comment-12646" data-aos=fade-up>
+			<div id="div-comment-12646" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='tq0eimy' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>tq0eimy</strong>
+				<a class="vip vip1" title="评论达人 VIP.1"><i class="be be-favorite"></i><span class="lv">1</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-12646"></a><br />
+			<span class="comment-aux">
+				2020年7月30日				<span class="comment-time">上午11:13</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>15</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-12646' onclick='return addComment.moveForm( "div-comment-12646", "12646", "respond", "7291" )' aria-label='回复给tq0eimy'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>&#8220;外边加一层frp,服务端在国内,客户端在vps&#8221;大佬这个怎么操作</p>
+			</div>
+	</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-23107"></ul></li>
+	<li class="comment even thread-odd thread-alt depth-1 ms bk da" id="comment-23107" data-aos=fade-up>
+			<div id="div-comment-23107" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='云点SEO' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong><a href="https://www.yundianseo.com/" rel="external nofollow" target="_blank" rel='external nofollow ugc' class='url'>云点SEO</a></strong>
+				<a class="vip vip6" title="评论达人 VIP.6"><i class="be be-favorite"></i><span class="lv">6</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-23107"></a><br />
+			<span class="comment-aux">
+				2021年6月7日				<span class="comment-time">上午10:40</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>16</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-23107' onclick='return addComment.moveForm( "div-comment-23107", "23107", "respond", "7291" )' aria-label='回复给云点SEO'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>质量一般</p>
+			</div>
+	</li><!-- #comment-## -->
+
+	<li class="comments-anchor"><ul id="anchor-comment-33113"></ul></li>
+	<li class="comment odd alt thread-even depth-1 ms bk da" id="comment-33113" data-aos=fade-up>
+			<div id="div-comment-33113" class="comment-body">
+		<div class="comment-author vcard">
+					<div class="comment-avatar load comment-avatar-show bk">
+									<img alt='猫叔' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />							</div>
+		
+		<strong>猫叔</strong>
+				<a class="vip vip0" title="评论达人 VIP.0"><i class="be be-favoriteoutline"></i><span class="lv">0</span></a>		<span class="comment-meta commentmetadata">
+			<a href="index.html#comment-33113"></a><br />
+			<span class="comment-aux">
+				2022年4月29日				<span class="comment-time">上午7:42</span>
+				
+				
+									<span class="floor">
+						<span class="floor-c floor-l"><i>17</i>F</span>											</span>
+								<br />
+															<span class='reply'><a rel='nofollow' class='comment-reply-link' href='index.html#comment-33113' onclick='return addComment.moveForm( "div-comment-33113", "33113", "respond", "7291" )' aria-label='回复给猫叔'><i class="be be-stack"> </i>回复</a></span>												</span>
+		</span>
+	</div>
+	<div class="clear"></div>
+	<p>请问上面并发测试的脚本是什么？</p>
+			</div>
+	</li><!-- #comment-## -->
+			
+					</ol><!-- .comment-list -->
+
+		
+	</div>
+<!-- #comments -->
+			
+		</main><!-- .site-main -->
+	</div><!-- .content-area -->
+
+<div id="sidebar" class="widget-area all-sidebar">
+
+	
+			<aside id="custom_html-10" class="widget_text widget widget_custom_html ms bk" data-aos="fade-up"><div class="textwidget custom-html-widget"><div style="margin: 0 0 5px 0;">
+<a href="../go/locvps/index.html" target="_blank" rel="nofollow noopener"> <img src="../wp-content/uploads/2022/04/locvps0-1.jpg"></a>
+<div class="clear"></div>
+</div>
+<div style="margin: 0 0 5px 0;">
+<a href="../16810.html" target="_blank" rel="noopener"> <img src="../wp-content/uploads/2022/04/raksmart.jpg"></a>
+<div class="clear"></div>
+</div>
+<a href="../16098.html"> <img src="../wp-content/uploads/2022/04/akkocloud-ad.jpg"></a>
+</div><div class="clear"></div></aside><aside id="recent_comments-3" class="widget recent_comments ms bk" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="title-i"><span></span><span></span><span></span><span></span></span>近期评论</h3>
+<div id="message" class="message-widget gaimg">
+			<ul>
+		
+		<li class="bkc load">
+			<a href="../12194.html#anchor-comment-33234" title="发表在：宝塔面板安装heimdall &#8211; 非docker安装这款完美的导航程序" rel="external nofollow">
+									<img alt='唐风月' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>唐风月</strong></span>
+				大鸟教程不错，通俗易懂			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../8365.html#anchor-comment-33233" title="发表在：linux宝塔面板安装composer的方法" rel="external nofollow">
+									<img alt='唐风月' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>唐风月</strong></span>
+				学习学习			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../13274.html#anchor-comment-33229" title="发表在：宝塔面板Nginx编译安装添加自定义模块PageSpeed" rel="external nofollow">
+									<img alt='水水水水水' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>水水水水水</strong></span>
+				学习来了 看隐藏内容			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../13274.html#anchor-comment-33228" title="发表在：宝塔面板Nginx编译安装添加自定义模块PageSpeed" rel="external nofollow">
+									<img alt='水水水水水' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>水水水水水</strong></span>
+				感谢分享 学习一下			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../8365.html#anchor-comment-33227" title="发表在：linux宝塔面板安装composer的方法" rel="external nofollow">
+									<img alt='玩户外i' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>玩户外i</strong></span>
+				666学习了			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../8365.html#anchor-comment-33226" title="发表在：linux宝塔面板安装composer的方法" rel="external nofollow">
+									<img alt='玩户外i' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>玩户外i</strong></span>
+				学到了			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../13733.html#anchor-comment-33225" title="发表在：aapanel部署微软OneDrive &#8211; 从宝塔面板移植OD插件" rel="external nofollow">
+									<img alt='Jack' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>Jack</strong></span>
+				学习来了 看隐藏内容			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../8862.html#anchor-comment-33224" title="发表在：宝塔面板搭建OLAINDEX &#8211;  简单而强大的OneDrive列表程序" rel="external nofollow">
+									<img alt='那个啥' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='https://www.daniao.org/wp-content/uploads/avatar/3fd4f1030e4bee4b50c26f5cdeb6b3fd96.png' class='avatar avatar-96 photo' height='96' width='96' />								<span class="comment_author"><strong>那个啥</strong></span>
+				看看隐藏内容是什么			</a>
+		</li>
+
+			</ul>
+</div>
+
+<div class="clear"></div></aside><aside id="custom_html-7" class="widget_text widget widget_custom_html ms bk" data-aos="fade-up"><h3 class="widget-title bkx da">Contact：投稿、广告投放等</h3><div class="textwidget custom-html-widget">Email：285256218(at)qq.com
+<br>
+QQ群：661988897
+
+
+
+</div><div class="clear"></div></aside>	
+	</div>
+
+<div class="clear"></div>	</div>
+	<div class="clear"></div>
+					<div id="footer-widget-box" class="footer-site-widget">
+			<div class="footer-widget bgt">
+			<aside id="cx_tag_cloud-6" class="widget cx_tag_cloud" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>建站VPS</h3>					<div class="tagcloud">
+		<a href="../tag/zji/index.html" class="tag-cloud-link tag-link-3936 tag-link-position-1" style="font-size: 15.666666666667px;" aria-label="zji (15个项目)">zji</a>
+<a href="../tag/vultr/index.html" class="tag-cloud-link tag-link-32 tag-link-position-2" style="font-size: 17.666666666667px;" aria-label="vultr (41个项目)">vultr</a>
+<a href="../tag/gigsgigscloud/index.html" class="tag-cloud-link tag-link-113 tag-link-position-3" style="font-size: 16.142857142857px;" aria-label="GigsGigsCloud (19个项目)">GigsGigsCloud</a>
+<a href="../tag/傲游主机/index.html" class="tag-cloud-link tag-link-24 tag-link-position-4" style="font-size: 16.904761904762px;" aria-label="傲游主机 (28个项目)">傲游主机</a>
+<a href="../tag/ion/index.html" class="tag-cloud-link tag-link-1906 tag-link-position-5" style="font-size: 17.52380952381px;" aria-label="iON (38个项目)">iON</a>
+<a href="../tag/linode/index.html" class="tag-cloud-link tag-link-115 tag-link-position-6" style="font-size: 16.904761904762px;" aria-label="linode (28个项目)">linode</a>
+<a href="../tag/henghost/index.html" class="tag-cloud-link tag-link-3175 tag-link-position-7" style="font-size: 15.952380952381px;" aria-label="henghost (17个项目)">henghost</a>
+<a href="../tag/justg/index.html" class="tag-cloud-link tag-link-3420 tag-link-position-8" style="font-size: 14.714285714286px;" aria-label="justg (9个项目)">justg</a>
+<a href="../tag/dmit/index.html" class="tag-cloud-link tag-link-2920 tag-link-position-9" style="font-size: 17.47619047619px;" aria-label="DMIT (37个项目)">DMIT</a>
+<a href="../tag/locvps/index.html" class="tag-cloud-link tag-link-198 tag-link-position-10" style="font-size: 16.52380952381px;" aria-label="Locvps (23个项目)">Locvps</a>
+<a href="../tag/hostwinds/index.html" class="tag-cloud-link tag-link-1672 tag-link-position-11" style="font-size: 14.714285714286px;" aria-label="Hostwinds (9个项目)">Hostwinds</a>
+<a href="../tag/搬瓦工/index.html" class="tag-cloud-link tag-link-89 tag-link-position-12" style="font-size: 18px;" aria-label="搬瓦工 (48个项目)">搬瓦工</a>
+<a href="../tag/digitalocean/index.html" class="tag-cloud-link tag-link-583 tag-link-position-13" style="font-size: 14px;" aria-label="DigitalOcean (6个项目)">DigitalOcean</a>
+<a href="../tag/hostdare/index.html" class="tag-cloud-link tag-link-125 tag-link-position-14" style="font-size: 15.238095238095px;" aria-label="HostDare (12个项目)">HostDare</a>
+<a href="../tag/spartanhost/index.html" class="tag-cloud-link tag-link-3460 tag-link-position-15" style="font-size: 14.238095238095px;" aria-label="spartanhost (7个项目)">spartanhost</a>	<div class="clear"></div>
+	</div>
+
+<div class="clear"></div></aside><aside id="cx_tag_cloud-7" class="widget cx_tag_cloud" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>便宜VPS</h3>					<div class="tagcloud">
+		<a href="../tag/skysilk/index.html" class="tag-cloud-link tag-link-742 tag-link-position-1" style="font-size: 14.566929133858px;" aria-label="SkySilk (5个项目)">SkySilk</a>
+<a href="../tag/virmach/index.html" class="tag-cloud-link tag-link-706 tag-link-position-2" style="font-size: 15.606299212598px;" aria-label="Virmach (12个项目)">Virmach</a>
+<a href="../tag/akkocloud/index.html" class="tag-cloud-link tag-link-3988 tag-link-position-3" style="font-size: 15.606299212598px;" aria-label="akkocloud (12个项目)">akkocloud</a>
+<a href="../tag/justhost-ru/index.html" class="tag-cloud-link tag-link-2481 tag-link-position-4" style="font-size: 15.385826771654px;" aria-label="JustHost.ru (10个项目)">JustHost.ru</a>
+<a href="../tag/pacificrack/index.html" class="tag-cloud-link tag-link-2020 tag-link-position-5" style="font-size: 17.181102362205px;" aria-label="PacificRack (40个项目)">PacificRack</a>
+<a href="../tag/contabo/index.html" class="tag-cloud-link tag-link-3306 tag-link-position-6" style="font-size: 16.07874015748px;" aria-label="Contabo (17个项目)">Contabo</a>
+<a href="../tag/buyvm/index.html" class="tag-cloud-link tag-link-923 tag-link-position-7" style="font-size: 15.732283464567px;" aria-label="BuyVM (13个项目)">BuyVM</a>
+<a href="../tag/cloudcone/index.html" class="tag-cloud-link tag-link-823 tag-link-position-8" style="font-size: 16.929133858268px;" aria-label="CloudCone (33个项目)">CloudCone</a>
+<a href="../tag/raksmart/index.html" class="tag-cloud-link tag-link-111 tag-link-position-9" style="font-size: 17.055118110236px;" aria-label="RAKsmart (36个项目)">RAKsmart</a>
+<a href="../tag/anynode/index.html" class="tag-cloud-link tag-link-976 tag-link-position-10" style="font-size: 14.566929133858px;" aria-label="AnyNode (5个项目)">AnyNode</a>
+<a href="../tag/ruvds/index.html" class="tag-cloud-link tag-link-2495 tag-link-position-11" style="font-size: 14px;" aria-label="RUVDS (3个项目)">RUVDS</a>
+<a href="../tag/gcorelabs/index.html" class="tag-cloud-link tag-link-2695 tag-link-position-12" style="font-size: 15.102362204724px;" aria-label="gcorelabs (8个项目)">gcorelabs</a>
+<a href="../tag/digital-vm/index.html" class="tag-cloud-link tag-link-1093 tag-link-position-13" style="font-size: 15.385826771654px;" aria-label="Digital-vm (10个项目)">Digital-vm</a>
+<a href="../tag/hostyun/index.html" class="tag-cloud-link tag-link-3944 tag-link-position-14" style="font-size: 16.393700787402px;" aria-label="hostyun (22个项目)">hostyun</a>
+<a href="../tag/racknerd/index.html" class="tag-cloud-link tag-link-2267 tag-link-position-15" style="font-size: 18px;" aria-label="RackNerd (73个项目)">RackNerd</a>	<div class="clear"></div>
+	</div>
+
+<div class="clear"></div></aside><aside id="cx_tag_cloud-5" class="widget cx_tag_cloud" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>大硬盘VPS</h3>					<div class="tagcloud">
+		<a href="../tag/alphavps/index.html" class="tag-cloud-link tag-link-3466 tag-link-position-1" style="font-size: 15.666666666667px;" aria-label="alphavps (6个项目)">alphavps</a>
+<a href="../tag/digitalocean/index.html" class="tag-cloud-link tag-link-583 tag-link-position-2" style="font-size: 15.666666666667px;" aria-label="DigitalOcean (6个项目)">DigitalOcean</a>
+<a href="../tag/buyvm/index.html" class="tag-cloud-link tag-link-923 tag-link-position-3" style="font-size: 16.575757575758px;" aria-label="BuyVM (13个项目)">BuyVM</a>
+<a href="../tag/linode/index.html" class="tag-cloud-link tag-link-115 tag-link-position-4" style="font-size: 17.515151515152px;" aria-label="linode (28个项目)">linode</a>
+<a href="../tag/spartanhost/index.html" class="tag-cloud-link tag-link-3460 tag-link-position-5" style="font-size: 15.818181818182px;" aria-label="spartanhost (7个项目)">spartanhost</a>
+<a href="../tag/virmach/index.html" class="tag-cloud-link tag-link-706 tag-link-position-6" style="font-size: 16.454545454545px;" aria-label="Virmach (12个项目)">Virmach</a>
+<a href="../tag/contabo/index.html" class="tag-cloud-link tag-link-3306 tag-link-position-7" style="font-size: 16.909090909091px;" aria-label="Contabo (17个项目)">Contabo</a>
+<a href="../tag/cloudcone/index.html" class="tag-cloud-link tag-link-823 tag-link-position-8" style="font-size: 17.727272727273px;" aria-label="CloudCone (33个项目)">CloudCone</a>
+<a href="../tag/vultr/index.html" class="tag-cloud-link tag-link-32 tag-link-position-9" style="font-size: 18px;" aria-label="vultr (41个项目)">vultr</a>
+<a href="../tag/interserver/index.html" class="tag-cloud-link tag-link-6982 tag-link-position-10" style="font-size: 14px;" aria-label="InterServer (1个项目)">InterServer</a>
+<a href="../tag/hosthatch/index.html" class="tag-cloud-link tag-link-3448 tag-link-position-11" style="font-size: 14.909090909091px;" aria-label="hosthatch (3个项目)">hosthatch</a>
+<a href="../tag/greencloudvps/index.html" class="tag-cloud-link tag-link-3435 tag-link-position-12" style="font-size: 15.212121212121px;" aria-label="Greencloudvps (4个项目)">Greencloudvps</a>
+<a href="../tag/10gbiz/index.html" class="tag-cloud-link tag-link-5165 tag-link-position-13" style="font-size: 16.454545454545px;" aria-label="10gbiz (12个项目)">10gbiz</a>
+<a href="../tag/servarica/index.html" class="tag-cloud-link tag-link-3455 tag-link-position-14" style="font-size: 15.212121212121px;" aria-label="servarica (4个项目)">servarica</a>
+<a href="../tag/liteservers-nl/index.html" class="tag-cloud-link tag-link-6590 tag-link-position-15" style="font-size: 14px;" aria-label="liteservers.nl (1个项目)">liteservers.nl</a>	<div class="clear"></div>
+	</div>
+
+<div class="clear"></div></aside>			<div class="clear"></div>
+		</div>
+		</div>
+		<footer id="colophon" class="site-footer bgt" role="contentinfo">
+		<div class="site-info">
+			<div class="site-copyright">
+				Copyright ©  大鸟博客:专注于国外VPS，独立服务器，主机测评和优惠信息分享!
+<p style="text-align: center;"><a href="../privacy-policy.html">privacy-policy</a></p>			</div>
+			<div class="add-info">
+								<div class="clear"></div>
+											</div>
+
+				</div>
+			</footer>
+		<ul id="scroll" class="bgt fds">
+	<li class="toc-scroll toc-no"><a class="toc-button fo ms"><i class="be be-sort"></i></a><div class="toc-prompt"><div class="toc-arrow">目录<i class="be be-playarrow"></i></div></div></li>
+	<li><a class="scroll-home ms fo" href="https://www.daniao.org/" rel="home"><i class="be be-home"></i></a></li>	<li><a class="scroll-h ms fo"><i class="be be-arrowup"></i></a></li>		<li><a class="scroll-b ms fo"><i class="be be-arrowdown"></i></a></li>			<ul class="night-day bgt">
+			<li><span class="night-main"><a class="m-night fo ms"><span class="m-moon"><span></span></span></a></span></li>
+			<li><a class="m-day fo ms"><i class="be be-loader"></i></a></li>
+		</ul>
+					</ul>
+				</div>
+<script type='text/javascript' id='superfish-js-after'>var fallwidth = {fall_width: 190}</script>
+<script type="text/javascript">var QaptchaJqueryPage="https://www.daniao.org/wp-content/themes/begin/inc/qaptcha.jquery.php"</script>
+<nav class="toc-box bk da fd yy"><div class="toc-ul-box"><ul class="toc-ul tocjq"></ul></div><span class="toc-zd bk dah yy"><span class="toc-close"><i class="be be-cross"></i><strong class="bgt">目录</strong></span></span></div></nav><script type='text/javascript' id='wp-postviews-cache-js-extra'>
+/* <![CDATA[ */
+var viewsCacheL10n = {"admin_ajax_url":"https:\/\/www.daniao.org\/wp-admin\/admin-ajax.php","post_id":"7291"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/postviews-cache.js?ver=5.9.3' id='wp-postviews-cache-js'></script>
+<script type='text/javascript' id='favorite-js-before'>
+var keep = {"ajaxurl":"https:\/\/www.daniao.org\/wp-admin\/admin-ajax.php","nonce":"41eca76db3","errorMessage":"\u51fa\u9519\u4e86"}; 
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/favorite-script.js?ver=2021%252F12%252F12' id='favorite-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/superfish.js?ver=2021%252F12%252F12' id='superfish-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/begin-script.js?ver=2021%252F12%252F12' id='be_script-js'></script>
+<script type='text/javascript' id='be_script-js-after'>
+var host = {"site":"https:\/\/www.daniao.org"}; var plt =  {"time":"30"}; 
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/ajax-content.js?ver=2021%252F12%252F12' id='ajax-content-js'></script>
+<script type='text/javascript' id='ajax-content-js-after'>
+var ajax_content = {"ajax_url":"https:\/\/www.daniao.org\/wp-admin\/admin-ajax.php"}; 
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/qrious.js?ver=2021%252F12%252F12' id='qrious-js-js'></script>
+<script type='text/javascript' id='qrious-js-js-after'>
+var ajaxqrurl = {"qrurl":false}; 
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/owl.js?ver=2021%252F12%252F12' id='owl-js'></script>
+<script type='text/javascript' id='owl-js-after'>
+var Timeout = {"owl_time":"4000"}; var gridcarousel = {"grid_carousel_f":"4"}; var flexiselitems = {"flexisel_f":"5"}; 
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/sticky.js?ver=2021%252F12%252F12' id='sticky-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/ias.js?ver=2021%252F12%252F12' id='ias-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/infinite-comment.js?ver=2021%252F12%252F12' id='infinite-comment-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/letter.js?ver=2021%252F12%252F12' id='letter-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/begin-tab.js?ver=2021%252F12%252F12' id='ajax_tab-js'></script>
+<script type='text/javascript' id='ajax_tab-js-after'>
+var ajax_tab = {"ajax_url":"https:\/\/www.daniao.org\/wp-admin\/admin-ajax.php"}; 
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/fancybox.js?ver=2021%252F12%252F12' id='fancybox-js'></script>
+<script type='text/javascript' src='../wp-includes/js/clipboard.min.js?ver=2021%252F12%252F12' id='clipboard-js-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/copy-code.js?ver=2021%252F12%252F12' id='copy-code-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/prettify.js?ver=2021%252F12%252F12' id='prettify-js'></script>
+<script type='text/javascript' id='social-share-js-before'>
+var beshare_opt="|https%3A%2F%2Fwww.daniao.org%2Fwp-content%2Fthemes%2Fbegin|0|https%3A%2F%2Fwww.daniao.org%2Fwp-admin%2Fadmin-ajax.php|7291";
+var zmy_beshare_donate_html='<div class="tab-navs"><div class="share-tab-nav-item item-alipay current da"><i class="cx cx-alipay"></i><span class="bgt">支付宝</span></div><div class="share-tab-nav-item item-weixin da"><i class="cx cx-weixin"></i><span class="bgt">微信</span></div></div><div class="share-tab-conts"><div class="share-tab-cont current"><div class="give-qr"><img src="../wp-content/uploads/2020/10/zhifubao-4.png" alt="支付宝二维码"></div><p>支付宝扫描二维码打赏作者</p></div><div class="share-tab-cont"><div class="give-qr"><img src="../wp-content/uploads/2020/10/wx-4.png" alt="微信二维码"></div><p>微信扫描二维码打赏作者</p></div></div>';var zmy_beshare_html='<div class="zmy-share-list" data-cover="https://www.daniao.org/wp-content/uploads/2019/11/pacificrack-logo.jpg"><a class="share-logo ico-weixin bk" data-cmd="weixin" title="分享到微信" rel="external nofollow"></a><a class="share-logo ico-weibo bk" data-cmd="weibo" title="分享到微博" rel="external nofollow"></a><a class="share-logo ico-qzone bk" data-cmd="qzone" title="分享到QQ空间" rel="external nofollow"></a><a class="share-logo ico-qq bk" data-cmd="qq" title="分享到QQ" rel="external nofollow"></a>';
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/social-share.js?ver=2021%252F12%252F12' id='social-share-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/jquery-ui.js?ver=2021%252F12%252F12' id='jquery-ui-js'></script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/qaptcha.js?ver=2021%252F12%252F12' id='qaptcha-js'></script>
+<script type='text/javascript' id='comments-ajax-js-before'>
+var aqt = {"qt":"1"}; 
+</script>
+<script type='text/javascript' src='../wp-content/themes/begin/js/comments-ajax.js?ver=2021%252F12%252F12' id='comments-ajax-js'></script>
+<script type='text/javascript' src='../wp-content/plugins/wp-instant-links/js/instantpage.js?ver=5.9.3' id='wp-instant-links.js-js'></script>
+</body>
+</html>

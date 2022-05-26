@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>技术分享 - 第2页 - 大鸟博客</title>
+<meta name="description" content="vps技术，脚本技术的分享！" />
+<meta name="keywords" content="技术分享" />
+<link rel="shortcut icon" href="../../../wp-content/uploads/2019/05/favicon.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../../../wp-content/themes/begin/img/favicon.png" />
+<link rel="pingback" href="https://www.daniao.org/xmlrpc.php">
+<meta name='robots' content='max-image-preview:large' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('index.html');--wp--preset--duotone--grayscale: url('index.html');--wp--preset--duotone--purple-yellow: url('index.html');--wp--preset--duotone--blue-red: url('index.html');--wp--preset--duotone--midnight: url('index.html');--wp--preset--duotone--magenta-yellow: url('index.html');--wp--preset--duotone--purple-green: url('index.html');--wp--preset--duotone--blue-orange: url('index.html');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='begin-style-css'  href='../../../wp-content/themes/begin/style.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='be-css'  href='../../../wp-content/themes/begin/css/be.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='fonts-css'  href='../../../wp-content/themes/begin/css/fonts/fonts.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='icons-css'  href='../../../wp-content/themes/begin/css/icons/icons.css?ver=2021%252F12%252F12' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='../../../wp-includes/css/dashicons.min.css?ver=5.9.3' type='text/css' media='all' />
+<link rel='stylesheet' id='iconfontd-css'  href='https://at.alicdn.com/t/font_968129_uxa92lcq0ta.css?ver=2021/12/12' type='text/css' media='all' />
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/jquery.lazyload.js?ver=2021%252F12%252F12' id='lazyload-js'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.daniao.org/wp-content/themes/begin/js/html5.js?ver=2021/12/12' id='html5-js'></script>
+<![endif]-->
+<style type="text/css">.single-post .entry-header h1, .single-content h3, .single-content h4, .single-content h6, .single-content h2 {border-left: 5px solid #1e73be;}.tagcloud {
+    overflow: hidden;
+    padding: 15px 0 12px 15px;
+}
+.tagcloud a {
+    float: left;
+    width: 31.3333%;
+    margin: 0 1% 1% 0;
+    padding: 0 8px;
+    color: #fff;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    font-size: 12px;
+    opacity: .7;
+    border-radius: 2px;
+    overflow: hidden;
+}
+ .tips {
+    position: absolute;
+    top: 14px;
+    left: 1px;
+    background-color: #FFFF00;
+    padding: 1px 3px 2px;
+    border-radius: 3px;
+    animation: moveUpDown 1s infinite;
+    -webkit-animation: moveUpDown 1s infinite;
+}
+.tips {
+    margin-left: 20px;
+    color: #666;
+}@media screen and (min-width: 1025px) {.nav-menu li.menu-item:nth-child(n+8){display: none;}}.planned {transition: width 4000ms;}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("../../../wp-content/uploads/2019/05/bg-light-min.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d2ee56508881021f9b68943d7ac789dd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body class="archive paged category category-technology-sharing category-18 custom-background paged-2 category-paged-2" ontouchstart="">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>	<script>
+		if (localStorage.getItem('beNightMode')) {
+			document.body.className +=' night';
+		}
+	</script>
+	<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header site-header-h">
+	<div id="header-main" class="header-main">
+				<div id="menu-container" class="da menu-glass">
+			<div id="navigation-top" class="bgt menu_c">
+				<span class="nav-search"></span>														<div class="logo-site">
+												<p class="site-title">
+						<a href="https://www.daniao.org/">
+			<span class="logo-small"><img src="../../../wp-content/themes/begin/img/logo-s.png" alt="大鸟博客" /></span>
+			大鸟博客		</a>
+	
+	
+			</p>
+
+								<p class="site-description clear-small">分享是一种美德~</p>
+								</div>
+
+									<div id="site-nav-wrap" class="site-nav-wrap-right">
+									<div id="sidr-close">
+						<span class="toggle-sidr-close"><i class="be be-cross"></i></span>
+												</div>
+					<nav id="site-nav" class="main-nav nav-ace">
+									<span id="navigation-toggle" class="bars"><i class="be be-menu"></i></span>
+	
+		<div class="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95-container"><ul id="menu-%e5%af%bc%e8%88%aa%e8%8f%9c%e5%8d%95" class="down-menu nav-menu main-menu-more"><li id="menu-item-12946" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-12946"><a href="https://www.daniao.org/">VPS监控</a>
+<ul class="sub-menu">
+	<li id="menu-item-12865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12865"><a target="_blank" rel="external nofollow" href="https://buyvm.qixi.me">buyvm实时库存</a></li>
+	<li id="menu-item-12864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12864"><a target="_blank" rel="external nofollow" href="https://bwh.qixi.me/">瓦工实时库存</a></li>
+	<li id="menu-item-16495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16495"><a target="_blank" rel="noopener" href="https://spartan.qixi.me/">斯巴达实时监控</a></li>
+</ul>
+</li>
+<li id="menu-item-12624" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12624"><a href="../../../dulifuwuqi/index.html">独立服务器</a></li>
+<li id="menu-item-342" class="glyphicon glyphicon-phone menu-item menu-item-type-taxonomy menu-item-object-category menu-item-342"><a href="../../../vps-control/index.html">VPS评测</a></li>
+<li id="menu-item-11649" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-11649"><a href="../../../vps-preferential-evaluation/index.html">VPS优惠</a></li>
+<li id="menu-item-11956" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-11956"><a href="../../../vps-tuijian/index.html">VPS推荐</a>
+<ul class="sub-menu">
+	<li id="menu-item-11961" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11961"><a href="../../../11943.html/index.html">美国 cn2 gia vps</a></li>
+	<li id="menu-item-12575" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12575"><a href="../../../12574.html">联通4837 vps</a></li>
+	<li id="menu-item-14799" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14799"><a href="../../../14795.html">联通9929 vps</a></li>
+	<li id="menu-item-11957" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11957"><a href="../../../11036.html/index.html">香港 cn2 gia vps</a></li>
+	<li id="menu-item-14396" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14396"><a href="../../../14368.html">新加坡cn2 gia vps</a></li>
+	<li id="menu-item-12387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12387"><a href="../../../12385.html">欧洲 cn2 gia vps</a></li>
+	<li id="menu-item-12050" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12050"><a href="../../../11576.html/index.html">南非 cn2 gia vps</a></li>
+	<li id="menu-item-12627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12627"><a href="../../../12625.html">大硬盘VPS</a></li>
+	<li id="menu-item-12663" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12663"><a href="../../../12661.html">windows vps</a></li>
+	<li id="menu-item-12798" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12798"><a href="../../../12796.html">日本软银VPS</a></li>
+	<li id="menu-item-13120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13120"><a href="../../../13055.html">俄罗斯cn2 gia vps</a></li>
+	<li id="menu-item-15462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15462"><a href="../../../15461.html">不限流量cn2 gia vps</a></li>
+</ul>
+</li>
+<li id="menu-item-14373" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-14373"><a href="../../../vps/index.html">VPS主机</a></li>
+<li id="menu-item-3480" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3480"><a href="../../../btpanel/index.html">宝塔面板</a></li>
+<li class="nav-more"><span class="nav-more-i"><i class="be be-more"></i></span><ul class="menu-more-li"></ul></li></ul></div>
+<div id="overlay"></div>
+					</nav>
+				</div>
+								<div class="ajax-content-box nav-img-post bk" data-text="W25hdl9pbWdd"></div>								<div class="clear"></div>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="search-main" class="da">
+	<div class="off-search-a"></div>
+	<div class="search-wrap bgt fadeInDown animated">
+					<div class="searchbar da">
+							<form method="get" id="searchform-so" action="https://www.daniao.org/">
+					<span class="search-input">
+						<input type="text" value="" name="s" id="so" class="bk dah" placeholder="" required />
+						<button type="submit" id="searchsubmit-so" class="bk da"><i class="be be-search"></i></button>
+					</span>
+										<div class="clear"></div>
+				</form>
+						</div>
+		
+				<div class="searchbar da">
+			<script>
+			function g(formname) {
+				var url = "https://www.baidu.com/baidu";
+				if (formname.s[1].checked) {
+					formname.ct.value = "2097152";
+				} else {
+					formname.ct.value = "0";
+				}
+				formname.action = url;
+				return true;
+			}
+			</script>
+			<form name="f1" onsubmit="return g(this)" target="_blank">
+				<span class="search-input">
+					<input name=word class="swap_value bk dah" placeholder="百度一下" name="q" />
+					<input name=tn type=hidden value="bds" />
+					<input name=cl type=hidden value="3" />
+					<input name=ct type=hidden />
+					<input name=si type=hidden value="www.daniao.org" />
+					<button type="submit" id="searchbaidu" class="search-close bk da"><i class="be be-baidu"></i></button>
+					<input name=s class="choose" type=radio />
+					<input name=s class="choose" type=radio checked />
+				</span>
+			</form>
+		</div>
+		
+					<div class="searchbar da">
+				<form method="get" id="searchform" action="https://cse.google.com/cse" target="_blank">
+					<span class="search-input">
+						<input type="text" value="" name="q" id="s" class="bk dah" placeholder="Google" />
+						<input type="hidden" name="cx" value="017978609038208656401:uoerpecp-ug" />
+						<input type="hidden" name="ie" value="UTF-8" />
+						<button type="submit" id="searchsubmit" class="search-close bk da"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1785" width="200" height="200"><path d="M522.016 438.016v176h290.016c-12 76-88 222.016-290.016 222.016-174.016 0-318.016-146.016-318.016-324s144-324 318.016-324c100 0 166.016 44 204 80l140-134.016C776 50.016 660 0 522.016 0c-282.016 0-512 230.016-512 512 0 284 230.016 512 512 512 296 0 492-208 492-500 0-34.016-4-60-8-84z" p-id="1786"></path></svg></button>
+					</span>
+				</form>
+			</div>
+		
+				<div class="searchbar da">
+			<form method="get" id="searchform" action="https://www.bing.com/search" target="_blank">
+				<span class="search-input">
+					<input type="text" value="" name="q" id="s" class="bk dah" placeholder="Bing" />
+					<input type="hidden" name="q1" value="site:www.daniao.org">
+					<button type="submit" id="searchsubmit" class="bk da"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2107" width="200" height="200"><path d="M340.5824 70.109867L102.536533 0.682667v851.217066L340.650667 643.345067V70.109867zM102.536533 851.7632l238.045867 171.6224 580.881067-340.923733V411.784533L102.536533 851.831467z" p-id="2108"></path><path d="M409.463467 255.3856l113.732266 238.933333 138.8544 56.866134 259.413334-139.400534-506.0608-156.330666z" p-id="2109"></path></svg></button>
+				</span>
+			</form>
+		</div>
+		
+		
+				<div class="searchbar da">
+			<form action="https://www.sogou.com/web" target="_blank" name="sogou_queryform">
+				<span class="search-input">
+					<input type="text" placeholder="上网从搜狗开始" name="query" class="bk dah">
+					<button type="submit" id="sogou_submit" class="search-close bk da" onclick="check_insite_input(document.sogou_queryform, 1)"><svg class="icon soico" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2771" width="200" height="200"><path d="M975.3088 822.10816l-53.80096-52.57216-0.02048 0.01024c-33.6896 59.16672-81.5616 109.2096-139.02848 145.4592-0.06144 0.04096-0.12288 0.07168-0.18432 0.11264l50.50368 53.62688a486.668288 486.668288 0 0 0 142.53056-146.6368z" p-id="2772"></path><path d="M509.83936 924.75392C281.87648 924.75392 97.08544 739.96288 97.08544 512c0-227.96288 184.80128-412.75392 412.75392-412.75392S922.59328 284.03712 922.59328 512c0 74.16832-19.57888 143.75936-53.83168 203.90912l0.02048-0.01024 53.80096 52.57216C969.13408 694.09792 996.07552 606.208 996.07552 512c0-267.34592-216.7296-484.07552-484.07552-484.07552S27.92448 244.65408 27.92448 512 244.65408 996.07552 512 996.07552c99.14368 0 191.31392-29.82912 268.06272-80.96768l-50.50368-53.62688c-63.62112 40.07936-138.96704 63.27296-219.71968 63.27296z" p-id="2773"></path><path d="M785.05984 403.10784l4.46464-105.96352s-126.03392-60.78464-310.6304-60.23168c-184.59648 0.55296-255.97952 65.24928-253.7472 153.36448 2.23232 88.1152 132.73088 142.76608 221.96224 170.6496 89.23136 27.88352 157.26592 45.73184 156.14976 81.98144-1.11616 36.2496-45.86496 48.51712-91.24864 47.96416s-204.31872-30.6688-282.95168-92.57984l-3.95264 120.46336s155.648 75.84768 324.06528 70.83008c168.41728-5.0176 255.97952-73.05216 254.30016-156.14976S700.29312 497.92 593.7664 464.45568s-173.44512-53.53472-172.88192-91.46368 127.71328-72.4992 364.17536 30.11584z" p-id="2774"></path></svg></button>
+					<input type="hidden" name="insite" value="www.daniao.org">
+				</span>
+			</form>
+		</div>
+				<div class="clear"></div>
+
+				<nav class="search-nav hz">
+			<h4 class="hz">搜索热点</h4>
+			<div class="clear"></div>
+			<div class="menu-%e6%90%9c%e7%b4%a2%e6%8e%a8%e8%8d%90-container"><ul id="menu-%e6%90%9c%e7%b4%a2%e6%8e%a8%e8%8d%90" class="search-menu"><li id="menu-item-3419" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-3419"><a href="../../../tag/宝塔面板/index.html">宝塔面板</a></li>
+<li id="menu-item-3421" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-3421"><a href="../../../tag/自建cdn/index.html">自建CDN</a></li>
+<li id="menu-item-3422" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-3422"><a href="../../../tag/bt宝塔面板命令大全/index.html">Bt(宝塔面板)命令大全</a></li>
+<li id="menu-item-10928" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10928"><a href="../../../tag/racknerd/index.html">RackNerd</a></li>
+<li id="menu-item-10929" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10929"><a href="../../../tag/搬瓦工/index.html">搬瓦工</a></li>
+<li id="menu-item-10930" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10930"><a href="../../../tag/腾讯云/index.html">腾讯云</a></li>
+<li id="menu-item-10931" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10931"><a href="../../../tag/wordpress/index.html">WordPress</a></li>
+<li id="menu-item-10932" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10932"><a href="../../../tag/pacificrack/index.html">PacificRack</a></li>
+<li id="menu-item-10933" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-10933"><a href="../../../tag/ucloud优惠/index.html">UCloud优惠</a></li>
+</ul></div>		</nav>
+				<div class="clear"></div>
+	</div>
+	<div class="off-search-b">
+		<div class="clear"></div>
+	</div>
+	<div class="off-search dah fadeInDown animated"></div>
+</div>		<nav class="bread">
+		<div class="be-bread">
+			<div class="breadcrumb"><span class="seat"></span><a href="https://www.daniao.org/" rel="bookmark">首页</a><i class="be be-arrowright"></i><span class="current">技术分享</span><span class="current"><i class="be be-arrowright"></i>第 2 页</div>		</div>
+	</nav>
+		<div class="header-sub">
+					<div class="tg-pc tg-site"><div style="margin: 0 0 5px 0;">
+<a href="../../../go/zji/index.html"  target="_blank" rel="nofollow"> 
+		<img src="../../../wp-content/uploads/2021/12/eezjj-1.jpg"></a>
+<div class="clear"></div>
+</div>
+<a href="../../../go/just/index.html"  target="_blank" rel="nofollow"> 
+		<img src="../../../wp-content/uploads/2022/01/just-ad-1.png"></a>
+</div>				<div class="clear"></div>
+	</div>
+
+
+	<div class="header-sub">
+				
+						<div class="clear"></div>
+	</div>
+								<div class="header-sub">
+		<div class="cat-des" data-aos=fade-up>
+							<i class="header-cat-icon zm zm-jiaocheng"></i>																			<div class="cat-des-img"><img src="../../../wp-content/uploads/2019/04/vps-111-min.jpg" alt="技术分享"></div>
+										<div class="des-title bgt">
+				<h1 class="des-t bgt">技术分享</h1>
+				<div class="des-p bgt"><p>vps技术，脚本技术的分享！</p>
+</div>			</div>
+		</div>
+
+			</div>
+		
+		
+	
+				
+	
+
+
+
+	
+	<div id="content" class="site-content site-small site-roll paged-roll">
+		
+<section id="primary" class="content-area">
+	<main id="main" class="site-main domargin" role="main">
+				
+					<article id="post-10822" data-aos=fade-up class="post ms bk doclose scl post-10822 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-cubepaas tag-3045 tag-cubepaas-onemanager tag-onemanagersharepoint tag-cubepaasonemanager hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../10822.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/09/OneManager-cubepaas-13-280x210.png" alt="cubepaas容器虚拟机安装OneManager &#8211; 包括onedrive和Sharepoint" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../10822.html/index.html" rel="bookmark">cubepaas容器虚拟机安装OneManager &#8211; 包括onedrive和Sharepoint</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				cubepaas容器虚拟机吃灰好久了，今天觉得还是要用起来比较好，因为国内机器，G口带宽速度上还是很有保障的，唯一的缺点就是需要加上端口号。 不过端口号也可以解决，用cdn就可以搞定。如果有北岸的域名...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">09月23日</span><span class="views"><i class="be be-eye ri"></i>9,952</span><span class="post-tag"><a href="../../../tag/cubepaas/index.html" class="tag-cloud-link tag-link-3042 tag-link-position-1" style="font-size: 14px;">cubepaas</a>
+<a href="../../../tag/cubepaas-onemanager/index.html" class="tag-cloud-link tag-link-3132 tag-link-position-2" style="font-size: 14px;">cubepaas OneManager</a>
+<a href="../../../tag/容器虚拟机/index.html" class="tag-cloud-link tag-link-3045 tag-link-position-3" style="font-size: 14px;">容器虚拟机</a></span><span class="comment"><a href="../../../10822.html/index.html#comments"><i class="be be-speechbubble ri"></i>5</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../10822.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-10456" data-aos=fade-up class="post ms bk doclose scl post-10456 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-cloudflare-workers tag-cf-workers tag-github hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../10456.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/08/gh-proxy-cf-worker-8-280x210.png" alt="搭建基于cloudflare workers的GitHub文件加速" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../10456.html" rel="bookmark">搭建基于cloudflare workers的GitHub文件加速</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				今天这篇文章，分享一下利用cloudflare workers自建一个API，来实现GitHub文件加速。之前分享过国内 GitHub 下载加速技巧分享，分享了2篇文章，如下： GitHub 下载速度...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">08月24日</span><span class="views"><i class="be be-eye ri"></i>25,349</span><span class="post-tag"><a href="../../../tag/cf-workers/index.html" class="tag-cloud-link tag-link-2379 tag-link-position-1" style="font-size: 14px;">cf Workers</a>
+<a href="../../../tag/cloudflare-workers/index.html" class="tag-cloud-link tag-link-1777 tag-link-position-2" style="font-size: 14px;">CloudFlare Workers</a>
+<a href="../../../tag/github文件加速/index.html" class="tag-cloud-link tag-link-2987 tag-link-position-3" style="font-size: 14px;">GitHub文件加速</a></span><span class="comment"><a href="../../../10456.html#comments"><i class="be be-speechbubble ri"></i>78</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../10456.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-10353" data-aos=fade-up class="post ms bk doclose scl post-10353 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-github-action tag-2953 tag-2954 hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../10353.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/08/Tieba_Github-Actions-7-280x210.png" alt="白女票github action：实现百度贴吧每日自动签到" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../10353.html" rel="bookmark">白女票github action：实现百度贴吧每日自动签到</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				利用Github Actions自动签到百度贴吧,实现也很简单，这篇文章就来说说如何设置。 1、简介 项目：https://github.com/peng4740/Tieba_Github-Actio...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">08月18日</span><span class="views"><i class="be be-eye ri"></i>5,896</span><span class="post-tag"><a href="../../../tag/github-action/index.html" class="tag-cloud-link tag-link-2731 tag-link-position-1" style="font-size: 14px;">github action</a>
+<a href="../../../tag/百度贴吧签到/index.html" class="tag-cloud-link tag-link-2953 tag-link-position-2" style="font-size: 14px;">百度贴吧签到</a>
+<a href="../../../tag/贴吧每日自动签到/index.html" class="tag-cloud-link tag-link-2954 tag-link-position-3" style="font-size: 14px;">贴吧每日自动签到</a></span><span class="comment"><a href="../../../10353.html#respond"><span class="no-comment"><i class="be be-speechbubble ri"></i>评论</span></a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../10353.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-10031" data-aos=fade-up class="post ms bk doclose scl post-10031 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-githubaction tag-webdav hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../10031.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/06/github-action-e5-27-min-280x210.png" alt="Github Action离线下载项目至坚果云WebDAV网盘" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../10031.html/index.html" rel="bookmark">Github Action离线下载项目至坚果云WebDAV网盘</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				这个项目挺有意思的，利用GithubAction离线下载github项目至自己的WebDAV网盘。这里用坚果云webdav！ 这样我们只要麻烦下github，把asset的链接给github acti...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">07月11日</span><span class="views"><i class="be be-eye ri"></i>13,386</span><span class="post-tag"><a href="../../../tag/githubaction/index.html" class="tag-cloud-link tag-link-2820 tag-link-position-1" style="font-size: 14px;">GithubAction</a>
+<a href="../../../tag/githubaction离线下载/index.html" class="tag-cloud-link tag-link-2822 tag-link-position-2" style="font-size: 14px;">GithubAction离线下载</a>
+<a href="../../../tag/坚果云webdav/index.html" class="tag-cloud-link tag-link-2821 tag-link-position-3" style="font-size: 14px;">坚果云WebDAV</a></span><span class="comment"><a href="../../../10031.html/index.html#comments"><i class="be be-speechbubble ri"></i>16</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../10031.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-9983" data-aos=fade-up class="post ms bk doclose scl post-9983 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-github tag-github- hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../9983.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/04/github-education-7-280x210.png" alt="GitHub 下载速度慢？国内 GitHub 下载加速技巧分享" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../9983.html/index.html" rel="bookmark">GitHub 下载速度慢？国内 GitHub 下载加速技巧分享</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				如果你经常需要从GitHub上Pull一些开源的项目啥的！国外的服务器还好，但是国内的服务器就非常慢了！经常是下不动或者只有 10KB 的速度。 这篇文章就来分享几个特别简单的可以加速GitHub 下...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">07月07日</span><span class="views"><i class="be be-eye ri"></i>15,433</span><span class="post-tag"><a href="../../../tag/github/index.html" class="tag-cloud-link tag-link-130 tag-link-position-1" style="font-size: 14px;">GITHUB</a>
+<a href="../../../tag/github-下载/index.html" class="tag-cloud-link tag-link-2811 tag-link-position-2" style="font-size: 14px;">GitHub 下载</a>
+<a href="../../../tag/github-下载加速/index.html" class="tag-cloud-link tag-link-2810 tag-link-position-3" style="font-size: 14px;">GitHub 下载加速</a></span><span class="comment"><a href="../../../9983.html/index.html#comments"><i class="be be-speechbubble ri"></i>3</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../9983.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-9947" data-aos=fade-up class="post ms bk doclose scl post-9947 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-chevereto hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../9947.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/01/Chevereto-logo-min-280x210.png" alt="Chevereto 调用百度图像内容审核  &#8211; 实现Chevereto图片鉴黄" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../9947.html" rel="bookmark">Chevereto 调用百度图像内容审核  &#8211; 实现Chevereto图片鉴黄</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				前面大鸟说了如何安装Chevereto商业版本，因为这是图床，所以我们需要设置下鉴黄。因为Chevereto默认没有这个功能，所以需要自己设置了。 具体的方法就是利用百度AI审核功能来实现图片内容识别...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">07月03日</span><span class="views"><i class="be be-eye ri"></i>12,566</span><span class="post-tag"><a href="../../../tag/chevereto/index.html" class="tag-cloud-link tag-link-2211 tag-link-position-1" style="font-size: 14px;">Chevereto</a>
+<a href="../../../tag/chevereto图片鉴黄/index.html" class="tag-cloud-link tag-link-2806 tag-link-position-2" style="font-size: 14px;">Chevereto图片鉴黄</a></span><span class="comment"><a href="../../../9947.html#comments"><i class="be be-speechbubble ri"></i>54</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../9947.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-9787" data-aos=fade-up class="post ms bk doclose scl post-9787 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-freenom tag-github-actions hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../9787.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/06/github-acitons-freenom-dn-7-min-280x210.png" alt="github actions 为freenom免费域名自动续期 &#8211; 算是最简单的续期方法" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../9787.html" rel="bookmark">github actions 为freenom免费域名自动续期 &#8211; 算是最简单的续期方法</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				前面的教程大鸟说了如何用（宝塔面板docker部署freenom免费域名自动续期教程）。这个教程的缺点就是需要自己准备准备一台vps，如果没有，你就不好部署。 今天说的教程是利用github acti...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">06月20日</span><span class="views"><i class="be be-eye ri"></i>32,257</span><span class="post-tag"><a href="../../../tag/freenom/index.html" class="tag-cloud-link tag-link-691 tag-link-position-1" style="font-size: 14px;">Freenom</a>
+<a href="../../../tag/freenom免费域名自动续期/index.html" class="tag-cloud-link tag-link-2637 tag-link-position-2" style="font-size: 14px;">freenom免费域名自动续期</a>
+<a href="../../../tag/github-actions/index.html" class="tag-cloud-link tag-link-2758 tag-link-position-3" style="font-size: 14px;">Github Actions</a></span><span class="comment"><a href="../../../9787.html#comments"><i class="be be-speechbubble ri"></i>130</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../9787.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-9763" data-aos=fade-up class="post ms bk doclose scl post-9763 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-github-actions tag-2759 hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../9763.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/06/cloud189-actions-8-min-280x210.png" alt="Github Actions 天翼云盘每日自动签到+抽奖:每天至少一百多MB" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../9763.html" rel="bookmark">Github Actions 天翼云盘每日自动签到+抽奖:每天至少一百多MB</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				天翼 云盘有每天签到和抽奖的活动，抽奖和签到都会免费赠送30M不等的云空间。2次抽奖+一次签到每天大概能领到100多MB的云空间。（云空间具体是多少要脸）。 唯一的缺点需要每天自己点开app，手动签到...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">06月19日</span><span class="views"><i class="be be-eye ri"></i>23,829</span><span class="post-tag"><a href="../../../tag/github-actions/index.html" class="tag-cloud-link tag-link-2758 tag-link-position-1" style="font-size: 14px;">Github Actions</a>
+<a href="../../../tag/天翼云盘自动签到/index.html" class="tag-cloud-link tag-link-2759 tag-link-position-2" style="font-size: 14px;">天翼云盘自动签到</a></span><span class="comment"><a href="../../../9763.html#comments"><i class="be be-speechbubble ri"></i>78</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../9763.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-9652" data-aos=fade-up class="post ms bk doclose scl post-9652 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-microsoft-365-e5 tag-e5 tag-github-actions hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../9652.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/06/github-action-e5-27-min-280x210.png" alt="github actions自动调用api &#8211; 实现Microsoft 365 E5玄学订阅" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../9652.html/index.html" rel="bookmark">github actions自动调用api &#8211; 实现Microsoft 365 E5玄学订阅</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				E5的到期时间越来越近，奈何半点续期的赶脚都么有。大鸟之前介绍过E5SubBot来实现续期，奈何最近问题多多，总是出故障。 这篇文章大鸟介绍下一个新的订阅方式，利用Github Action刷Micr...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">06月12日</span><span class="views"><i class="be be-eye ri"></i>21,284</span><span class="post-tag"><a href="../../../tag/e5续期/index.html" class="tag-cloud-link tag-link-2733 tag-link-position-1" style="font-size: 14px;">E5续期</a>
+<a href="../../../tag/github-actions/index.html" class="tag-cloud-link tag-link-2758 tag-link-position-2" style="font-size: 14px;">Github Actions</a>
+<a href="../../../tag/microsoft-365-e5订阅/index.html" class="tag-cloud-link tag-link-2732 tag-link-position-3" style="font-size: 14px;">Microsoft 365 E5订阅</a></span><span class="comment"><a href="../../../9652.html/index.html#comments"><i class="be be-speechbubble ri"></i>6</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../9652.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-9464" data-aos=fade-up class="post ms bk doclose scl post-9464 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-ion tag-cloudflare-pro-plesk tag-cloudflare-spectrum hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../9464.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/05/Cloudflare-Pro-Plesk-ion-16-280x210.png" alt="iON虚拟机免费添加 Cloudflare Pro Plesk订阅 &#8211; 附Cloudflare Spectrum使用教程" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../9464.html/index.html" rel="bookmark">iON虚拟机免费添加 Cloudflare Pro Plesk订阅 &#8211; 附Cloudflare Spectrum使用教程</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				前阵子iON送了自家的免费虚拟主机，应该有很多人都领到了吧。如果你拿来建站，意义不大。今天这篇教程就来说说如何利用 Krypt iON 的免费虚拟机申请添加 Cloudflare Pro Plesk ...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">05月30日</span><span class="views"><i class="be be-eye ri"></i>20,059</span><span class="post-tag"><a href="../../../tag/cloudflare-pro-plesk/index.html" class="tag-cloud-link tag-link-2699 tag-link-position-1" style="font-size: 14px;">Cloudflare Pro Plesk</a>
+<a href="../../../tag/cloudflare-spectrum/index.html" class="tag-cloud-link tag-link-2700 tag-link-position-2" style="font-size: 14px;">Cloudflare Spectrum</a>
+<a href="../../../tag/ion虚拟机/index.html" class="tag-cloud-link tag-link-2698 tag-link-position-3" style="font-size: 14px;">iON虚拟机</a></span><span class="comment"><a href="../../../9464.html/index.html#comments"><i class="be be-speechbubble ri"></i>28</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../9464.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-8916" data-aos=fade-up class="post ms bk doclose scl post-8916 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-okteto tag-okteto-google tag-google hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../8916.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/04/jim3magoogle-mirror-3-280x210.png" alt="Okteto 免费容器安装谷歌（google）镜像的简易教程" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../8916.html" rel="bookmark">Okteto 免费容器安装谷歌（google）镜像的简易教程</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				Okteto 好玩的地方就是可以安装不同的docker容器。今天这篇文章就来说说如何安装谷歌（google）镜像，不然放在那边闲着也是闲着。 如果你还没有账号，可以先去注册一个，可以参考前面的教程。 ...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">04月18日</span><span class="views"><i class="be be-eye ri"></i>31,322</span><span class="post-tag"><a href="../../../tag/google镜像/index.html" class="tag-cloud-link tag-link-2556 tag-link-position-1" style="font-size: 14px;">google镜像</a>
+<a href="../../../tag/okteto/index.html" class="tag-cloud-link tag-link-2492 tag-link-position-2" style="font-size: 14px;">Okteto</a>
+<a href="../../../tag/okteto-安装谷歌（google）镜像/index.html" class="tag-cloud-link tag-link-2555 tag-link-position-3" style="font-size: 14px;">Okteto 安装谷歌（google）镜像</a></span><span class="comment"><a href="../../../8916.html#comments"><i class="be be-speechbubble ri"></i>112</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../8916.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-8808" data-aos=fade-up class="post ms bk doclose scl post-8808 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-raidrive-google-drive tag-raidrive-onedrive tag-raidrive-webdav tag-raidrive hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../8808.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/04/raidrive_dn-13-280x210.png" alt="RaiDrive简单使用 &#8211; 挂载Google Drive,OneDrive，天翼WebDAV" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../8808.html" rel="bookmark">RaiDrive简单使用 &#8211; 挂载Google Drive,OneDrive，天翼WebDAV</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				网盘太多之后，你可能需要一个工具把这些网盘都整合起来。如果一个网盘就需要下载一个客户端，那电脑岂不乱套了。 今天要分享的RaiDrive免费软件，就可以实现Dropbox、Google Drive、O...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">04月10日</span><span class="views"><i class="be be-eye ri"></i>130,426</span><span class="post-tag"><a href="../../../tag/raidrive/index.html" class="tag-cloud-link tag-link-2529 tag-link-position-1" style="font-size: 14px;">RaiDrive</a>
+<a href="../../../tag/raidrive-onedrive/index.html" class="tag-cloud-link tag-link-2526 tag-link-position-2" style="font-size: 14px;">RaiDrive OneDrive</a>
+<a href="../../../tag/raidrive-挂载google-drive/index.html" class="tag-cloud-link tag-link-2525 tag-link-position-3" style="font-size: 14px;">RaiDrive 挂载Google Drive</a></span><span class="comment"><a href="../../../8808.html#comments"><i class="be be-speechbubble ri"></i>451</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../8808.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-8779" data-aos=fade-up class="post ms bk doclose scl post-8779 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-sharex tag-2516 hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../8779.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/04/baidu-img-url-7-280x210.png" alt="利用Sharex把百度贴吧当图床 &#8211; 貌似可以一直用" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../8779.html/index.html" rel="bookmark">利用Sharex把百度贴吧当图床 &#8211; 貌似可以一直用</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				其实百度贴吧可以作为图床，但是使用起来需要一点技巧，这篇文章就来说说如何使用。 1、分析 优点：访问快、上传快。 缺点：ssl限制外链，普通模式不限制，但是也有可能和新浪一样全部限制外链。 水印问题：...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">04月07日</span><span class="views"><i class="be be-eye ri"></i>9,795</span><span class="post-tag"><a href="../../../tag/sharex/index.html" class="tag-cloud-link tag-link-2515 tag-link-position-1" style="font-size: 14px;">Sharex</a>
+<a href="../../../tag/sharex图床/index.html" class="tag-cloud-link tag-link-2517 tag-link-position-2" style="font-size: 14px;">Sharex图床</a>
+<a href="../../../tag/百度贴吧当图床/index.html" class="tag-cloud-link tag-link-2516 tag-link-position-3" style="font-size: 14px;">百度贴吧当图床</a></span><span class="comment"><a href="../../../8779.html/index.html#comments"><i class="be be-speechbubble ri"></i>25</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../8779.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-8533" data-aos=fade-up class="post ms bk doclose scl post-8533 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-heyterm tag-2449 tag-heytermipv6 hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../8533.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/03/heyterm-logo-280x210.png" alt="利用web版ssh工具：HeyTerm（嘿哟终端）连接IPv6服务器" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../8533.html/index.html" rel="bookmark">利用web版ssh工具：HeyTerm（嘿哟终端）连接IPv6服务器</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				HeyTerm（嘿哟终端）是一个web版本的终端工具，可以用来集中管理自己的vps服务器。前面的文章介绍了EUserv可以免费申请ipv6的小鸡，但是小鸡连接起来确是个问题。 因为要配置ipv6的本地...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">03月18日</span><span class="views"><i class="be be-eye ri"></i>49,943</span><span class="post-tag"><a href="../../../tag/heyterm/index.html" class="tag-cloud-link tag-link-2448 tag-link-position-1" style="font-size: 14px;">HeyTerm</a>
+<a href="../../../tag/heyterm使用教程/index.html" class="tag-cloud-link tag-link-2450 tag-link-position-2" style="font-size: 14px;">HeyTerm使用教程</a>
+<a href="../../../tag/嘿哟终端/index.html" class="tag-cloud-link tag-link-2449 tag-link-position-3" style="font-size: 14px;">嘿哟终端</a></span><span class="comment"><a href="../../../8533.html/index.html#comments"><i class="be be-speechbubble ri"></i>20</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../8533.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-7991" data-aos=fade-up class="post ms bk doclose scl post-7991 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-win10 tag-win10docker tag-dockerjenkins hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../7991.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2020/01/Docker-Desktop-win10-10-min-280x210.png" alt="win10家庭版安装Docker Desktop &#8211; 附本地docker安装jenkins" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../7991.html" rel="bookmark">win10家庭版安装Docker Desktop &#8211; 附本地docker安装jenkins</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				有些项目非常消耗资源，服务器那点配置已经跟不上了。于是想在自己本地电脑折腾下，因为用的是家庭版win10，那折腾起来坑真的是很多…… 具体的安装 因为docker不支持家庭版本的安装，所以安装之前，你...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">01月16日</span><span class="views"><i class="be be-eye ri"></i>12,695</span><span class="post-tag"><a href="../../../tag/docker安装jenkins/index.html" class="tag-cloud-link tag-link-2259 tag-link-position-1" style="font-size: 14px;">docker安装jenkins</a>
+<a href="../../../tag/win10家庭版/index.html" class="tag-cloud-link tag-link-2257 tag-link-position-2" style="font-size: 14px;">win10家庭版</a>
+<a href="../../../tag/win10家庭版安装docker/index.html" class="tag-cloud-link tag-link-2258 tag-link-position-3" style="font-size: 14px;">win10家庭版安装Docker</a></span><span class="comment"><a href="../../../7991.html#comments"><i class="be be-speechbubble ri"></i>40</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../7991.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-7625" data-aos=fade-up class="post ms bk doclose scl post-7625 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-chrome tag-google-chrome tag-parallel-downloading hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../7625.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2019/04/chrome-log-280x210.png" alt="Google Chrome浏览器开启Parallel downloading(多线程下载)" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../7625.html/index.html" rel="bookmark">Google Chrome浏览器开启Parallel downloading(多线程下载)</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				Parallel downloading 意为“平行下载”，可以理解为多线程下载，采用平行下载的Chrome速度还是有很大提升的，但是默认Chrome并没有开启，所以默认下载都是单线程下载，速度感人！...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">12月11日</span><span class="views"><i class="be be-eye ri"></i>61,014</span><span class="post-tag"><a href="../../../tag/chrome/index.html" class="tag-cloud-link tag-link-394 tag-link-position-1" style="font-size: 14px;">chrome</a>
+<a href="../../../tag/google-chrome/index.html" class="tag-cloud-link tag-link-2011 tag-link-position-2" style="font-size: 14px;">Google Chrome</a>
+<a href="../../../tag/parallel-downloading/index.html" class="tag-cloud-link tag-link-2111 tag-link-position-3" style="font-size: 14px;">Parallel downloading</a></span><span class="comment"><a href="../../../7625.html/index.html#comments"><i class="be be-speechbubble ri"></i>3</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../7625.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-7134" data-aos=fade-up class="post ms bk doclose scl post-7134 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-cloudcone hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../7134.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2019/11/cloudcone-app-5-min-280x210.png" alt="CloudCone用户控制台app.cloudcone.com打不开的解决方式" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../7134.html/index.html" rel="bookmark">CloudCone用户控制台app.cloudcone.com打不开的解决方式</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				- CloudCone用户控制台app.cloudcone.com打不开了，为啥打不开了，已经被DNS污染。国内ping发现被DNS污染了。域名IP解析到了不正确的IP地址，如图： ip都指向了脸书或...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">11月01日</span><span class="views"><i class="be be-eye ri"></i>11,010</span><span class="post-tag"><a href="../../../tag/cloudcone/index.html" class="tag-cloud-link tag-link-823 tag-link-position-1" style="font-size: 14px;">CloudCone</a></span><span class="comment"><a href="../../../7134.html/index.html#comments"><i class="be be-speechbubble ri"></i>6</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../7134.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-6638" data-aos=fade-up class="post ms bk doclose scl post-6638 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-tampermonkey tag-1823 tag-1825 tag-idm hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../6638.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2019/09/Tampermonkey-9-min-280x210.png" alt="油猴(tampermonkey)+百度网盘直链下载助手+IDM" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../6638.html/index.html" rel="bookmark">油猴(tampermonkey)+百度网盘直链下载助手+IDM</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				【百度网盘直链下载助手】是一款免客户端获取百度网盘文件真实下载地址的油猴脚本，支持Windows，Mac，Linux，Android等多平台，可使用IDM，XDown等多线程加速工具加速下载，告别下载...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">09月26日</span><span class="views"><i class="be be-eye ri"></i>177,170</span><span class="post-tag"><a href="../../../tag/idm/index.html" class="tag-cloud-link tag-link-1826 tag-link-position-1" style="font-size: 14px;">IDM</a>
+<a href="../../../tag/油猴/index.html" class="tag-cloud-link tag-link-1823 tag-link-position-2" style="font-size: 14px;">油猴</a>
+<a href="../../../tag/油猴tampermonkey/index.html" class="tag-cloud-link tag-link-1822 tag-link-position-3" style="font-size: 14px;">油猴(tampermonkey)</a></span><span class="comment"><a href="../../../6638.html/index.html#comments"><i class="be be-speechbubble ri"></i>5</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../6638.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-6346" data-aos=fade-up class="post ms bk doclose scl post-6346 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-windows-terminal tag-win10 hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../6346.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2019/08/Windows-Terminal-7-min-280x210.png" alt="Windows Terminal 尝鲜安装以及简单的界面设置" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../6346.html/index.html" rel="bookmark">Windows Terminal 尝鲜安装以及简单的界面设置</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				Windows Terminal在Build 2019开发者大会上公布。预计6月下旬出稳定版，现在看看已经到8月底了，大鸟刚想起来有这么个工具。大鸟在win10的应用商店搜索了关键词‘Windows ...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">08月28日</span><span class="views"><i class="be be-eye ri"></i>26,238</span><span class="post-tag"><a href="../../../tag/win10的应用商店/index.html" class="tag-cloud-link tag-link-1730 tag-link-position-1" style="font-size: 14px;">win10的应用商店</a>
+<a href="../../../tag/windows-terminal/index.html" class="tag-cloud-link tag-link-1331 tag-link-position-2" style="font-size: 14px;">Windows Terminal</a>
+<a href="../../../tag/windows-terminal安装/index.html" class="tag-cloud-link tag-link-1729 tag-link-position-3" style="font-size: 14px;">Windows Terminal安装</a></span><span class="comment"><a href="../../../6346.html/index.html#comments"><i class="be be-speechbubble ri"></i>3</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../6346.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+					<article id="post-6060" data-aos=fade-up class="post ms bk doclose scl post-6060 type-post status-publish format-standard has-post-thumbnail hentry category-technology-sharing tag-windowsjavajdk tag-windowsjava tag-windowsjdk tag-1633 hgk">
+	
+					<figure class="thumbnail">
+				<span class="load"><a class="sc" rel="external nofollow" href="../../../6060.html/index.html"><img src="../../../wp-content/themes/begin/prune.php?src=https:%252F%252Fwww.daniao.org%252Fwp-content%252Fthemes%252Fbegin%252Fimg%252Floading.png&amp;w=280&amp;h=210&amp;a=&amp;zc=1" data-original="https://www.daniao.org/wp-content/uploads/2019/08/windows10-jdk1.8-2-min-280x210.png" alt="Windows配置java(jdk)环境 &#8211; 自己本地搭建磁力搜索系统" width="280" height="210" ></a></span>				<span class="cat"><a href="../../index.html">技术分享</a></span>
+			</figure>
+		
+		<header class="entry-header entry-header-c">
+					<h2 class="entry-title"><a href="../../../6060.html/index.html" rel="bookmark">Windows配置java(jdk)环境 &#8211; 自己本地搭建磁力搜索系统</a></h2>			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+					<div class="archive-content">
+				昨天说了用宝塔面板的JAVA项目管理器来安装项目，不过鉴于宝塔的JAVA项目管理器会各种灵异，所以大鸟今天说下，如何在本地配置JAVA环境，之后安装想要配置的项目。 在官网下载jdk需要先注册，所以小...			</div>
+			<div class="clear"></div>
+			<span class="title-l"></span>
+										<span class="entry-meta lbm lvr">
+					<span class="date">08月08日</span><span class="views"><i class="be be-eye ri"></i>7,812</span><span class="post-tag"><a href="../../../tag/windows配置java/index.html" class="tag-cloud-link tag-link-1631 tag-link-position-1" style="font-size: 14px;">Windows配置java</a>
+<a href="../../../tag/windows配置javajdk环境/index.html" class="tag-cloud-link tag-link-1630 tag-link-position-2" style="font-size: 14px;">Windows配置java(jdk)环境</a>
+<a href="../../../tag/windows配置jdk/index.html" class="tag-cloud-link tag-link-1632 tag-link-position-3" style="font-size: 14px;">Windows配置jdk</a></span><span class="comment"><a href="../../../6060.html/index.html#comments"><i class="be be-speechbubble ri"></i>4</a></span>				</span>
+			
+				<div class="clear"></div>
+	</div><!-- .entry-content -->
+
+							<span class="entry-more more-roll ease"><a href="../../../6060.html/index.html" rel="external nofollow">阅读全文</a></span>		</article><!-- #post -->
+
+
+			
+		
+		
+	</main><!-- .site-main -->
+
+	<div class="pagenav-clear"><div class="clear"></div><div class="turn turn-small">		<form class="page-nav-form" action="index.html" method="get">
+			<input class="input-number dah" type="number" autocomplete="off" min="1" max="6" onblur="if(this.value==''){this.value='2';}" onfocus="if(this.value=='2'){this.value='';}" value="2" name="paged" />
+						<div class="page-button-box"><input class="page-button dah" value="" type="submit"></div>
+		</form>
+		<span class="max-num">6</span>				<nav id="nav-below">
+				<div class="nav-next"><a href="../../index.html" ></a></div>
+				<div class="nav-previous"><a href="../3/index.html" ></a></div>
+			</nav>
+		
+	<nav class="navigation pagination" aria-label="文章">
+		<h2 class="screen-reader-text">文章导航</h2>
+		<div class="nav-links"><a class="prev page-numbers" href="../../index.html"><i class="be be-arrowleft dah"></i></a>
+<a class="page-numbers" href="../../index.html">1</a>
+<span aria-current="page" class="page-numbers current">2</span>
+<a class="page-numbers" href="../3/index.html">3</a>
+<a class="page-numbers" href="../4/index.html">4</a>
+<a class="page-numbers" href="../5/index.html">5</a>
+<a class="page-numbers" href="../6/index.html">6</a>
+<a class="next page-numbers" href="../3/index.html"><i class="be be-arrowright dah"></i></a></div>
+	</nav><div class="clear"></div></div></div>
+
+</section><!-- .content-area -->
+
+<div id="sidebar" class="widget-area all-sidebar">
+
+	
+	
+			<aside id="custom_html-11" class="widget_text widget widget_custom_html ms bk" data-aos="fade-up"><div class="textwidget custom-html-widget"><div style="margin: 0 0 5px 0;">
+<a href="../../../go/locvps/index.html" target="_blank" rel="nofollow noopener"> <img src="../../../wp-content/uploads/2022/04/locvps0-1.jpg"></a>
+<div class="clear"></div>
+</div>
+<div style="margin: 0 0 5px 0;">
+<a href="../../../16810.html" target="_blank" rel="noopener"> <img src="../../../wp-content/uploads/2022/04/raksmart.jpg"></a>
+<div class="clear"></div>
+</div>
+<a href="../../../16098.html"> <img src="../../../wp-content/uploads/2022/04/akkocloud-ad.jpg"></a>
+</div><div class="clear"></div></aside><aside id="recent_comments-4" class="widget recent_comments ms bk" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="title-i"><span></span><span></span><span></span><span></span></span>近期评论</h3>
+<div id="message" class="message-widget gaimg">
+			<ul>
+		
+		<li class="bkc load">
+			<a href="../../../12194.html#anchor-comment-33234" title="发表在：宝塔面板安装heimdall &#8211; 非docker安装这款完美的导航程序" rel="external nofollow">
+									<img alt='唐风月' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>唐风月</strong></span>
+				大鸟教程不错，通俗易懂			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../../../8365.html#anchor-comment-33233" title="发表在：linux宝塔面板安装composer的方法" rel="external nofollow">
+									<img alt='唐风月' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>唐风月</strong></span>
+				学习学习			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../../../13274.html#anchor-comment-33229" title="发表在：宝塔面板Nginx编译安装添加自定义模块PageSpeed" rel="external nofollow">
+									<img alt='水水水水水' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>水水水水水</strong></span>
+				学习来了 看隐藏内容			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../../../13274.html#anchor-comment-33228" title="发表在：宝塔面板Nginx编译安装添加自定义模块PageSpeed" rel="external nofollow">
+									<img alt='水水水水水' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>水水水水水</strong></span>
+				感谢分享 学习一下			</a>
+		</li>
+
+		
+		<li class="bkc load">
+			<a href="../../../8365.html#anchor-comment-33227" title="发表在：linux宝塔面板安装composer的方法" rel="external nofollow">
+									<img alt='玩户外i' src='data:image/gif;base64,R0lGODdhAQABAPAAAMPDwwAAACwAAAAAAQABAAACAkQBADs=' data-original='' class='avatar avatar-96 photo letter' height='96' width='96' />								<span class="comment_author"><strong>玩户外i</strong></span>
+				666学习了			</a>
+		</li>
+
+			</ul>
+</div>
+
+<div class="clear"></div></aside><aside id="custom_html-8" class="widget_text widget widget_custom_html ms bk" data-aos="fade-up"><h3 class="widget-title bkx da">Contact：投稿、广告投放等</h3><div class="textwidget custom-html-widget">Email：285256218(at)qq.com
+<br>
+QQ群：661988897
+
+
+
+</div><div class="clear"></div></aside>	</div>
+
+<div class="clear"></div>	</div>
+	<div class="clear"></div>
+					<div id="footer-widget-box" class="footer-site-widget">
+			<div class="footer-widget bgt">
+			<aside id="cx_tag_cloud-6" class="widget cx_tag_cloud" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>建站VPS</h3>					<div class="tagcloud">
+		<a href="../../../tag/ion/index.html" class="tag-cloud-link tag-link-1906 tag-link-position-1" style="font-size: 17.52380952381px;" aria-label="iON (38个项目)">iON</a>
+<a href="../../../tag/hostdare/index.html" class="tag-cloud-link tag-link-125 tag-link-position-2" style="font-size: 15.238095238095px;" aria-label="HostDare (12个项目)">HostDare</a>
+<a href="../../../tag/搬瓦工/index.html" class="tag-cloud-link tag-link-89 tag-link-position-3" style="font-size: 18px;" aria-label="搬瓦工 (48个项目)">搬瓦工</a>
+<a href="../../../tag/justg/index.html" class="tag-cloud-link tag-link-3420 tag-link-position-4" style="font-size: 14.714285714286px;" aria-label="justg (9个项目)">justg</a>
+<a href="../../../tag/傲游主机/index.html" class="tag-cloud-link tag-link-24 tag-link-position-5" style="font-size: 16.904761904762px;" aria-label="傲游主机 (28个项目)">傲游主机</a>
+<a href="../../../tag/vultr/index.html" class="tag-cloud-link tag-link-32 tag-link-position-6" style="font-size: 17.666666666667px;" aria-label="vultr (41个项目)">vultr</a>
+<a href="../../../tag/locvps/index.html" class="tag-cloud-link tag-link-198 tag-link-position-7" style="font-size: 16.52380952381px;" aria-label="Locvps (23个项目)">Locvps</a>
+<a href="../../../tag/linode/index.html" class="tag-cloud-link tag-link-115 tag-link-position-8" style="font-size: 16.904761904762px;" aria-label="linode (28个项目)">linode</a>
+<a href="../../../tag/zji/index.html" class="tag-cloud-link tag-link-3936 tag-link-position-9" style="font-size: 15.666666666667px;" aria-label="zji (15个项目)">zji</a>
+<a href="../../../tag/spartanhost/index.html" class="tag-cloud-link tag-link-3460 tag-link-position-10" style="font-size: 14.238095238095px;" aria-label="spartanhost (7个项目)">spartanhost</a>
+<a href="../../../tag/gigsgigscloud/index.html" class="tag-cloud-link tag-link-113 tag-link-position-11" style="font-size: 16.142857142857px;" aria-label="GigsGigsCloud (19个项目)">GigsGigsCloud</a>
+<a href="../../../tag/hostwinds/index.html" class="tag-cloud-link tag-link-1672 tag-link-position-12" style="font-size: 14.714285714286px;" aria-label="Hostwinds (9个项目)">Hostwinds</a>
+<a href="../../../tag/henghost/index.html" class="tag-cloud-link tag-link-3175 tag-link-position-13" style="font-size: 15.952380952381px;" aria-label="henghost (17个项目)">henghost</a>
+<a href="../../../tag/dmit/index.html" class="tag-cloud-link tag-link-2920 tag-link-position-14" style="font-size: 17.47619047619px;" aria-label="DMIT (37个项目)">DMIT</a>
+<a href="../../../tag/digitalocean/index.html" class="tag-cloud-link tag-link-583 tag-link-position-15" style="font-size: 14px;" aria-label="DigitalOcean (6个项目)">DigitalOcean</a>	<div class="clear"></div>
+	</div>
+
+<div class="clear"></div></aside><aside id="cx_tag_cloud-7" class="widget cx_tag_cloud" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>便宜VPS</h3>					<div class="tagcloud">
+		<a href="../../../tag/contabo/index.html" class="tag-cloud-link tag-link-3306 tag-link-position-1" style="font-size: 16.07874015748px;" aria-label="Contabo (17个项目)">Contabo</a>
+<a href="../../../tag/hostyun/index.html" class="tag-cloud-link tag-link-3944 tag-link-position-2" style="font-size: 16.393700787402px;" aria-label="hostyun (22个项目)">hostyun</a>
+<a href="../../../tag/skysilk/index.html" class="tag-cloud-link tag-link-742 tag-link-position-3" style="font-size: 14.566929133858px;" aria-label="SkySilk (5个项目)">SkySilk</a>
+<a href="../../../tag/racknerd/index.html" class="tag-cloud-link tag-link-2267 tag-link-position-4" style="font-size: 18px;" aria-label="RackNerd (73个项目)">RackNerd</a>
+<a href="../../../tag/buyvm/index.html" class="tag-cloud-link tag-link-923 tag-link-position-5" style="font-size: 15.732283464567px;" aria-label="BuyVM (13个项目)">BuyVM</a>
+<a href="../../../tag/gcorelabs/index.html" class="tag-cloud-link tag-link-2695 tag-link-position-6" style="font-size: 15.102362204724px;" aria-label="gcorelabs (8个项目)">gcorelabs</a>
+<a href="../../../tag/akkocloud/index.html" class="tag-cloud-link tag-link-3988 tag-link-position-7" style="font-size: 15.606299212598px;" aria-label="akkocloud (12个项目)">akkocloud</a>
+<a href="../../../tag/justhost-ru/index.html" class="tag-cloud-link tag-link-2481 tag-link-position-8" style="font-size: 15.385826771654px;" aria-label="JustHost.ru (10个项目)">JustHost.ru</a>
+<a href="../../../tag/cloudcone/index.html" class="tag-cloud-link tag-link-823 tag-link-position-9" style="font-size: 16.929133858268px;" aria-label="CloudCone (33个项目)">CloudCone</a>
+<a href="../../../tag/ruvds/index.html" class="tag-cloud-link tag-link-2495 tag-link-position-10" style="font-size: 14px;" aria-label="RUVDS (3个项目)">RUVDS</a>
+<a href="../../../tag/raksmart/index.html" class="tag-cloud-link tag-link-111 tag-link-position-11" style="font-size: 17.055118110236px;" aria-label="RAKsmart (36个项目)">RAKsmart</a>
+<a href="../../../tag/virmach/index.html" class="tag-cloud-link tag-link-706 tag-link-position-12" style="font-size: 15.606299212598px;" aria-label="Virmach (12个项目)">Virmach</a>
+<a href="../../../tag/anynode/index.html" class="tag-cloud-link tag-link-976 tag-link-position-13" style="font-size: 14.566929133858px;" aria-label="AnyNode (5个项目)">AnyNode</a>
+<a href="../../../tag/pacificrack/index.html" class="tag-cloud-link tag-link-2020 tag-link-position-14" style="font-size: 17.181102362205px;" aria-label="PacificRack (40个项目)">PacificRack</a>
+<a href="../../../tag/digital-vm/index.html" class="tag-cloud-link tag-link-1093 tag-link-position-15" style="font-size: 15.385826771654px;" aria-label="Digital-vm (10个项目)">Digital-vm</a>	<div class="clear"></div>
+	</div>
+
+<div class="clear"></div></aside><aside id="cx_tag_cloud-5" class="widget cx_tag_cloud" data-aos="fade-up"><h3 class="widget-title bkx da"><span class="s-icon"></span><span class="title-i"><span></span><span></span><span></span><span></span></span>大硬盘VPS</h3>					<div class="tagcloud">
+		<a href="../../../tag/alphavps/index.html" class="tag-cloud-link tag-link-3466 tag-link-position-1" style="font-size: 15.666666666667px;" aria-label="alphavps (6个项目)">alphavps</a>
+<a href="../../../tag/virmach/index.html" class="tag-cloud-link tag-link-706 tag-link-position-2" style="font-size: 16.454545454545px;" aria-label="Virmach (12个项目)">Virmach</a>
+<a href="../../../tag/linode/index.html" class="tag-cloud-link tag-link-115 tag-link-position-3" style="font-size: 17.515151515152px;" aria-label="linode (28个项目)">linode</a>
+<a href="../../../tag/cloudcone/index.html" class="tag-cloud-link tag-link-823 tag-link-position-4" style="font-size: 17.727272727273px;" aria-label="CloudCone (33个项目)">CloudCone</a>
+<a href="../../../tag/vultr/index.html" class="tag-cloud-link tag-link-32 tag-link-position-5" style="font-size: 18px;" aria-label="vultr (41个项目)">vultr</a>
+<a href="../../../tag/contabo/index.html" class="tag-cloud-link tag-link-3306 tag-link-position-6" style="font-size: 16.909090909091px;" aria-label="Contabo (17个项目)">Contabo</a>
+<a href="../../../tag/digitalocean/index.html" class="tag-cloud-link tag-link-583 tag-link-position-7" style="font-size: 15.666666666667px;" aria-label="DigitalOcean (6个项目)">DigitalOcean</a>
+<a href="../../../tag/hosthatch/index.html" class="tag-cloud-link tag-link-3448 tag-link-position-8" style="font-size: 14.909090909091px;" aria-label="hosthatch (3个项目)">hosthatch</a>
+<a href="../../../tag/spartanhost/index.html" class="tag-cloud-link tag-link-3460 tag-link-position-9" style="font-size: 15.818181818182px;" aria-label="spartanhost (7个项目)">spartanhost</a>
+<a href="../../../tag/liteservers-nl/index.html" class="tag-cloud-link tag-link-6590 tag-link-position-10" style="font-size: 14px;" aria-label="liteservers.nl (1个项目)">liteservers.nl</a>
+<a href="../../../tag/servarica/index.html" class="tag-cloud-link tag-link-3455 tag-link-position-11" style="font-size: 15.212121212121px;" aria-label="servarica (4个项目)">servarica</a>
+<a href="../../../tag/buyvm/index.html" class="tag-cloud-link tag-link-923 tag-link-position-12" style="font-size: 16.575757575758px;" aria-label="BuyVM (13个项目)">BuyVM</a>
+<a href="../../../tag/interserver/index.html" class="tag-cloud-link tag-link-6982 tag-link-position-13" style="font-size: 14px;" aria-label="InterServer (1个项目)">InterServer</a>
+<a href="../../../tag/10gbiz/index.html" class="tag-cloud-link tag-link-5165 tag-link-position-14" style="font-size: 16.454545454545px;" aria-label="10gbiz (12个项目)">10gbiz</a>
+<a href="../../../tag/greencloudvps/index.html" class="tag-cloud-link tag-link-3435 tag-link-position-15" style="font-size: 15.212121212121px;" aria-label="Greencloudvps (4个项目)">Greencloudvps</a>	<div class="clear"></div>
+	</div>
+
+<div class="clear"></div></aside>			<div class="clear"></div>
+		</div>
+		</div>
+		<footer id="colophon" class="site-footer bgt" role="contentinfo">
+		<div class="site-info">
+			<div class="site-copyright">
+				Copyright ©  大鸟博客:专注于国外VPS，独立服务器，主机测评和优惠信息分享!
+<p style="text-align: center;"><a href="../../../privacy-policy.html">privacy-policy</a></p>			</div>
+			<div class="add-info">
+								<div class="clear"></div>
+											</div>
+
+				</div>
+			</footer>
+		<ul id="scroll" class="bgt fds">
+	<li class="toc-scroll toc-no"><a class="toc-button fo ms"><i class="be be-sort"></i></a><div class="toc-prompt"><div class="toc-arrow">目录<i class="be be-playarrow"></i></div></div></li>
+	<li><a class="scroll-home ms fo" href="https://www.daniao.org/" rel="home"><i class="be be-home"></i></a></li>	<li><a class="scroll-h ms fo"><i class="be be-arrowup"></i></a></li>		<li><a class="scroll-b ms fo"><i class="be be-arrowdown"></i></a></li>			<ul class="night-day bgt">
+			<li><span class="night-main"><a class="m-night fo ms"><span class="m-moon"><span></span></span></a></span></li>
+			<li><a class="m-day fo ms"><i class="be be-loader"></i></a></li>
+		</ul>
+					</ul>
+				</div>
+<script type='text/javascript' id='superfish-js-after'>var fallwidth = {fall_width: 190}</script>
+<script type='text/javascript' id='favorite-js-before'>
+var keep = {"ajaxurl":"https:\/\/www.daniao.org\/wp-admin\/admin-ajax.php","nonce":"41eca76db3","errorMessage":"\u51fa\u9519\u4e86"}; 
+</script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/favorite-script.js?ver=2021%252F12%252F12' id='favorite-js'></script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/superfish.js?ver=2021%252F12%252F12' id='superfish-js'></script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/begin-script.js?ver=2021%252F12%252F12' id='be_script-js'></script>
+<script type='text/javascript' id='be_script-js-after'>
+var host = {"site":"https:\/\/www.daniao.org"}; var plt =  {"time":"30"}; 
+</script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/ajax-content.js?ver=2021%252F12%252F12' id='ajax-content-js'></script>
+<script type='text/javascript' id='ajax-content-js-after'>
+var ajax_content = {"ajax_url":"https:\/\/www.daniao.org\/wp-admin\/admin-ajax.php"}; 
+</script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/qrious.js?ver=2021%252F12%252F12' id='qrious-js-js'></script>
+<script type='text/javascript' id='qrious-js-js-after'>
+var ajaxqrurl = {"qrurl":false}; 
+</script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/owl.js?ver=2021%252F12%252F12' id='owl-js'></script>
+<script type='text/javascript' id='owl-js-after'>
+var Timeout = {"owl_time":"4000"}; var gridcarousel = {"grid_carousel_f":"4"}; var flexiselitems = {"flexisel_f":"5"}; 
+</script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/sticky.js?ver=2021%252F12%252F12' id='sticky-js'></script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/ias.js?ver=2021%252F12%252F12' id='ias-js'></script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/letter.js?ver=2021%252F12%252F12' id='letter-js'></script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/begin-tab.js?ver=2021%252F12%252F12' id='ajax_tab-js'></script>
+<script type='text/javascript' id='ajax_tab-js-after'>
+var ajax_tab = {"ajax_url":"https:\/\/www.daniao.org\/wp-admin\/admin-ajax.php"}; 
+</script>
+<script type='text/javascript' src='../../../wp-content/themes/begin/js/fancybox.js?ver=2021%252F12%252F12' id='fancybox-js'></script>
+<script type='text/javascript' src='../../../wp-content/plugins/wp-instant-links/js/instantpage.js?ver=5.9.3' id='wp-instant-links.js-js'></script>
+</body>
+</html>
