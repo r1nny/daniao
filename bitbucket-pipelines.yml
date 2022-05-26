@@ -3,6 +3,7 @@ image: mcr.microsoft.com/azure-cli
 pipelines:
     default:
     - step:
-        script: - |
+        script:
+        - |
             echo haha
             echo haha
