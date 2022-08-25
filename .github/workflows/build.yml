@@ -5,4 +5,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@main
-        - run: az storage blob upload-batch -d '$web' -s . --account-name cs410032001172b072a --account-key Joyv3x3zdkFV4L3qwSt8NaR0QfJcWYiivfehnVl2mKcDXRqU9ns/b4nDP8vW8+UED1bQsYG+Cy+VDeU+KaNLUQ== --debug
+        - run: |
+              az storage blob directory delete-batch -s \$web --account-name cs410032001172b072a --account-key Joyv3x3zdkFV4L3qwSt8NaR0QfJcWYiivfehnVl2mKcDXRqU9ns/b4nDP8vW8+UED1bQsYG+Cy+VDeU+KaNLUQ== --debug
+              az storage blob upload-batch -d \$web -s . --account-name cs410032001172b072a --account-key Joyv3x3zdkFV4L3qwSt8NaR0QfJcWYiivfehnVl2mKcDXRqU9ns/b4nDP8vW8+UED1bQsYG+Cy+VDeU+KaNLUQ== --debug
